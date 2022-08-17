@@ -1,7 +1,7 @@
-- name: Slack
-  url: https://is445-fall2020.slack.com/
+- name: Campuswire
+  url: https://campuswire.com/c/G851982E3/feed
   facollection: fab
-  faicon: fa-slack
+  faicon: fa-comment
   weight: 20
 - name: JupyterHub
   url: https://jupyterhub.ischool.illinois.edu/
