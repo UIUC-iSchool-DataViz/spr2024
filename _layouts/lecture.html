@@ -37,7 +37,7 @@
       <div class="slides">
           <section class="titleslide">
               <h1>{{page.title}}</h1>
-              <h2>{{site.data.class.instructor.name}}</h2>
+              <h2>{{site.data.class.instructors | map: "name" | join ", " }}</h2>
               <h2>{{site.data.class.course.name}} - {{site.data.class.course.semester}}</h2>
           </section>
         <section data-markdown

@@ -7,13 +7,15 @@
     <li>
       <p>{{co.credit_hours}} Credit Hours</p>
     </li>
-    <li>Instructor: {{ii.name}}</li>
+    {% for instructor in ii %}
+    <li>Instructor: {{instructor.name}}</li>
     <ul>
-      <li>Email: {{ii.email}}</li>
-      <li>Office: {{ii.office}}</li>
-      <li>Office Hour: {{ii.office_hours}}</li>
+      <li>Email: {{instructor.email}}</li>
+      <li>Office: {{instructor.office}}</li>
+      <li>Office Hour: {{instructor.office_hours}}</li>
       <li> Preferred Contact Method: email</li>
       </ul>
+    {% endfor %}
   </td>
   <td>
   <ul>
