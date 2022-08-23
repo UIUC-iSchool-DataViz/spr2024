@@ -7,7 +7,7 @@ tags:
 description: >-
   The syllabus for the course, along with discussions about "what"
   visualizations are, and how to orient yourself in the course.
-date: 2021-08-24
+date: 2022-08-22
 ---
 
 ## Land Acknowledgment
@@ -21,32 +21,27 @@ Website.](https://chancellor.illinois.edu/land_acknowledgement.html)
 <!-- .slide: class="vertical_center" -->
 ## Basics
 
-11:00AM-12:20PM on Tuesdays and Thursdays, Armory 331 and Online.
+11:00AM-12:20PM on Tuesdays and Thursdays, Materials Science and Engineering, Room 119
+
+### Instructors
 
 Matthew Turk - `mjturk@illinois.edu`
-Office Hours: By appointment
+Office Hours: Wednesday 3-4PM and by appointment
 
-TA Tzu-Kun (Esther) Hsiao `tkhsiao2@illinois.edu`
+Tzu-Kun (Esther) Hsiao - `tkhsiao2@illinois.edu`
+Office Hours: Monday afternoon
 
-https://uiuc-ischool-dataviz.github.io/fall2021-acg-acu/
+TA: Mohit Gupta - `mohitg2@illinois.edu`
 
----
-
-## Online Accommodations
-
-I will attempt to:
-
- * Livestream via Zoom (and possibly [twitch.tv/powersoffour](https://twitch.tv/powersoffour))
- * Monitor slack for questions and zoom for "raised hands"
- * Record lectures to post them at a later date
+https://uiuc-ischool-dataviz.github.io/fall2022-acg-acu/
 
 ---
 
 ## Summary of Locations
 
  * Grades and assignments will be on [Moodle](https://learn.illinois.edu/).
- * Course repo is at [UIUC-iSchool-DataViz/fall2021-acg-acu](https://github.com/UIUC-iSchool-DataViz/fall2021-acg-acu/), automatically built at [uiuc-ischool-dataviz.github.io/fall2021-acg-acu/](https://uiuc-ischool-dataviz.github.io/fall2021-acg-acu). Lecture notes, notebooks, data and course info will be placed there.
- * Slack is the best place to ask questions: https://is445-fall2021.slack.com/
+ * Course repo is at [UIUC-iSchool-DataViz/fall2022-acg-acu](https://github.com/UIUC-iSchool-DataViz/fall2022-acg-acu/), automatically built at [uiuc-ischool-dataviz.github.io/fall2022-acg-acu/](https://uiuc-ischool-dataviz.github.io/fall2022-acg-acu). Lecture notes, notebooks, data and course info will be placed there.
+ * Campuswire is the best place to ask questions: https://campuswire.com/c/G851982E3/feed
 
 You are invited to clone the repo, fork and submit changes (typos, etc!), and
 to use any information in it in the future.
@@ -60,7 +55,6 @@ In advance of class today, you were asked to take a "quiz" online.  We're now go
 * What are the most memorable movies you saw over the last year?
 * Do you prefer cats or dogs?
 * How would you quantify your experience in visualization?
-* How many hours do you spend online in classes each week?
 
 ---
 
@@ -68,7 +62,7 @@ In advance of class today, you were asked to take a "quiz" online.  We're now go
 
 I'm going to send you into breakout rooms and give you about ten minutes.  
 
-https://bit.ly/3jcRRYZ
+https://bit.ly/3R6xWJs
 
 On your group's number, visualize your results.
 
@@ -93,7 +87,7 @@ There'll be a few more along the way, but these are the main ones.  Each touches
 
 And we might use a few of:
 
- * [Iodide](https://iodide.io/)
+ * [Iodide](https://iodide.io/) (or a descendant)
  * [Glitch](https://glitch.com/)
  * [Colaboratory](https://colab.research.google.com/)
 
@@ -216,8 +210,8 @@ get in the way of the underlying meaning?
  * Tuesday Lecture: topic introduction, some lecturing
  * Thursday Lecture: some lecturing, greater focus on interactive discussion and code-along
 
-This is my first time teaching this fully online, and it's *also* my first time
-teaching it split in half!  So we might fiddle with the format as time goes on.
+This is our first time co-teaching the course!  So we will be adjusting as
+appropriate as we go.
 
 notes:
 This structure will likely be deviated from during the course, but in general
@@ -348,29 +342,22 @@ submission.
 
 ---
 
-## Slack
+## Campuswire
 
-We will be sharing a slack channel with the online-only class, so feel free to
-converse with them as well!
+We'll be using campuswire, which is one of the only approved "chat" systems for
+UIUC.  You can use this for group discussions, sharing links and ideas, and
+asking questions.  Office hours may occasionally be held here.
 
-Team is at `is445-fall2021.slack.com` and we share it with the other section
+You will need an invite, which I will provide *during this class*.
 
- * `#general` : General announcements
- * `#is445-fall2021-acg-acu` : Specific questions/issues for *this* class.
- * `#random` : see a cool viz you want to share?  This is the place!
-
----
-
-## Slack
-
- * Use the `@` sign appropriately: `@[person]`, `@here`, `@channel`
  * Web client, standalone client and mobile devices can access this team.
  * At the end of the semester, the team will be discontinued.
  * Please think carefully before direct messaging if you could ask in a public
    forum instead.
  * Conduct will be held to same standards as any educational venue.
 
-As always, you can also post questions to the Moodle forum as well.
+
+https://campuswire.com/c/G851982E3/feed
 
 notes:
 Please use slack as much as you need!  You can use it to share items and
@@ -379,17 +366,12 @@ feedback.  However, please do behave in a professional fashion.
 
 ---
 
-## How do I access Slack?
-
- * Should have received instructions in welcome email
- * Ask me after class or send me an email with _your_ email
-
 ---
 
 ## Github
 
- * Course repo is at [UIUC-iSchool-DataViz/fall2021-acg-acu](https://github.com/UIUC-iSchool-DataViz/fall2021-acg-acu/)
- * Automatically built to [uiuc-ischool-dataviz.github.io/fall2021-acg-acu/](https://uiuc-ischool-dataviz.github.io/fall2021-acg-acu/)
+ * Course repo is at [UIUC-iSchool-DataViz/fall2022-acg-acu](https://github.com/UIUC-iSchool-DataViz/fall2022-acg-acu/)
+ * Automatically built to [uiuc-ischool-dataviz.github.io/fall2022-acg-acu/](https://uiuc-ischool-dataviz.github.io/fall2022-acg-acu/)
  * Copy the notebooks to your directory before using them.
  * Supplemental materials can be found at [UIUC-iSchool-DataViz/support-files](https://github.com/UIUC-iSchool-DataViz/support-files)
 
