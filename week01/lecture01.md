@@ -366,8 +366,6 @@ feedback.  However, please do behave in a professional fashion.
 
 ---
 
----
-
 ## Github
 
  * Course repo is at [UIUC-iSchool-DataViz/fall2022-acg-acu](https://github.com/UIUC-iSchool-DataViz/fall2022-acg-acu/)
