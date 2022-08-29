@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>IS445 Data Visualization, Fall 2022, Lecture 03</title>
+
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reset.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/theme/white.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/5.11.2/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/reveal.js-copycode@1.0.1/plugin/copycode/copycode.css">
+
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
+
+    </head>
+    <body>
+        <div class="reveal">
+          <section class="slides">
+            <section data-markdown data-separator="---" data-separator-notes="^Note:" style="vertical-align:top;text-align:left" data-transition="none">
+                <script type="text/template">
+                    ### Data Manipulation and Distributions
+                    
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    Matthew Turk & Esther Hsiao
+
+                    Data Visualization - Fall 2022
+
+                    Note:
+
+                </script>
+            </section>
+            <section data-markdown data-separator="---" data-separator-notes="^Note:" style="vertical-align:top;text-align:left;font-size:70%;" data-transition="none">
+              <textarea data-template>
+                ## Topics
+                
+                - Types of data
+                - Operational Palette
+                - Represent data in a visualization
+
+                ---
+
+                ## Types of data
+
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/data2viz/data2viz_1.svg" width="3000"/>
+                
+                - Numerical/quantitative
+                - Categorical/qualitative
+
+                Note:
+                - Understanding data types is important beacuse the data type decides what operations are allowed to perform on the values.
+                - Focus on the two baisc types
+
+
+                ---
+
+                ## Numerical and Quantitative
+
+                - Numerical values
+                  - Number of roomates you have, room temperature
+                
+                - Discrete data
+                  - Countable, finite values
+                  - Separable
+                  - Number of students in a class, number of palyers in a game
+                
+                - Continuous data
+                  - Measurable
+                  - Continuous set of values
+                  - Weight, length, frequency, etc.
+                
+                ---
+
+                ## Categorical and Qualitative
+
+                - Data cannot be expressed as a number.
+                  - Dialogues (text, audio), Symbols
+                  - Categories (cat, dog)
+                
+                - Nominal data
+                  - Something can be named.
+                  - Smartphone brands (Apple, Samsung, LG), Countries
+
+                - Ordinal data
+                  - Values have some kind of relative positions
+                  - Things can be placed in order or rank.
+                  - Likert scale 
+
+                ---
+
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/data2viz/data2viz_2.svg" width="3000"/>
+
+                Note:
+                - We have went through how data is stored and the basic types of data.
+                
+                In the process of making a visualization,
+                - Sometimes we may want to plot a subset of the data    
+                - We may also don't want to plot the data as it is (e.g., highly skewed data)
+
+                ---
+                
+                ### Operations can be applied to data
+
+                - Filter 
+                - Mutation
+                - Grouping
+                - Splitting 
+
+                ---
+
+                ### Filtering Operations
+                - Relationships
+                  - Equality, inequality
+                  - Range filter (less than, greater than)
+                  - Intersection, disjoint
+                - Sampling
+                  - Randomized sampling
+                  - Regular sampling
+                  - Weighted sampling
+                - Related data queries
+                  - Queries on other columns at fixed row location
+                  - External membership queries
+
+                ---
+
+                ### Relationship examples
+                - Equality 
+                  - Equal/not equal to a value
+                    ```PYTHON
+                        value == 10
+                        value == 'Monday'
+
+                        value != 10
+                    ```
+                - Range filter 
+                  - Less than (or equal)
+                  - Greater than (or equal)
+                  - "Comes before" and "Comes after"
+                    ```PYTHON
+                        value > 10
+                        1 < value <= 10
+                        value > May 1, 2020
+                    ```
+                
+                ---
+
+                ### Relationship examples
+                - Set-based operations
+                  - "Is a member"
+                  - "Is not a member"
+                  - "Shares members"
+                  - "Shares no members"
+                  ```python
+                      value in (1, 3, 5)
+                      value not in ("Monday", "Wednesday", "Friday")
+                  ```
+
+                ---
+
+                ### Sampling
+                - What's the purpose of sampling?
+                - Distribution of group members in the sample and in the population.
+                  - Preserve original distribution
+                  - Balanced number of members in two (or more) groups
+                - Order of records in the dataset 
+                  - Regular sampling with an interval of 3 but the data happens to be [1, 2, 2, 1, 2, 2, ....]
+
+                ---
+                ### Mutation Operations
+                - Injective operations    
+                    What do you observe from the graph?
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/log_transform.svg"/>
+
+                Note:
+                Sometimes plotting the data as-is makes the graph hard to read
+                Injective operations: maps distinct elements to distinct elements
+
+                ---
+                ### Mutation Operations
+                - Injective operations
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/Additive_Multiplicative.svg" width="3000"/>
+
+                ---
+                ### Mutation Operations
+                - Injective operations
+                - Smoothing (reduction; not injective)
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/smooth_moving_avg.svg" width="3500"/>
+                  
+                  - [weather observations in the past 72 hours](https://w1.weather.gov/data/obhistory/KCMI.html)
+                - Histograms (reduction; not injective)
+
+                ---
+                ### Aggregate
+
+                We can aggregate data points according to their position along defined dimensions.
+                - Count
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/counts.svg" width="3000"/>
+
+                ---
+                ### Aggregate
+
+                - Sum 
+                  - (x1 + x2 + x3 + ... + xn)
+                  - Total number of visitors in a year
+                
+                - Average
+                  - (x1 + x2 + x3 + ... + xn)/n
+                  - Average visitors of a year
+                
+                - Weighted Average
+                  - (x1w1 + x2w2 + x3w + ... + xnwn)/(w1 + w2 + w3 + ... + wn)
+                  - Average number of visitors, weighted by monthly visitor counts
+                
+                ---
+                ### Binning and Histograms
+                Make data points into a continuous distribution
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/binning_uniform.svg" width="3000"/>
+
+                ---
+                ### Binning and Histograms
+                Make data points into a continuous distribution
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/binning_non-uniform.svg" width="3000"/>
+
+
+                ---
+                ### Splitting
+                - We can split data based on some characteristic.
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/splitting.svg" width="6000"/>
+                
+                ---
+                ### Dimensions of Representation 
+                Given a single datum on a visualization, we can control several different components of its representation.
+
+                - Position                               
+                    <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/position.svg" width="70%" style="margin-left:50%;">
+                  
+                Note:
+                Datum: a piece of information
+
+                ---
+                ### Dimensions of Representation 
+                Given a single datum on a visualization, we can control several different components of its representation.
+
+                - Color
+                    <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/color.svg" width="70%" style="margin-left:50%;">                        
+
+                ---
+                ### Dimensions of Representation 
+                Given a single datum on a visualization, we can control several different components of its representation.
+
+                - Size
+                    <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/size.svg" width="70%" style="margin-left:50%;">
+                
+                ---
+                ### Dimensions of Representation 
+                Given a single datum on a visualization, we can control several different components of its representation.
+
+                - Shape
+                    <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/shape.svg" width="70%" style="margin-left:50%;">
+
+                ---
+                ### Dimensions of Representation 
+                Given a single datum on a visualization, we can control several different components of its representation.
+
+                - Relationship
+                    <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/relationship.svg" width="70%" style="margin-left:50%;">
+
+                ---
+                ### Scales and Scaling
+                Displaying a quantity requires assigning to it a given representation.     
+                A common mechanism for doing this is to vary the color of a particular region or set of display units with respect to the quantity expressed in those units.
+
+                In mathematical notation, we first "normalize" our data value by assigning to a range:   
+                g(v)→v′∈[0,1]    
+                and then, given a color mapping function, assign to this a given color:    
+                f(v′)→(R,G,B)    
+
+                ---
+                - Does this data describe a geometric object?
+                - Are the data points *connected* to each other?
+                - Can we describe data points with a fixed set of *categories*?
+                - Is there a *quantity* associated with the data?
+                - Are the datapoints *continuous* along one or more dimensions?
+
+                https://www.informationisbeautiful.net/visualizations/the-hollywood-insider/
+                
+              </textarea>
+            </section>
+          </section>
+        </div>
+      </body>>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/markdown/markdown.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/highlight/highlight.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/notes/notes.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+
+
+			});
+		</script>
+    </body>
+</html>
