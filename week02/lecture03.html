@@ -1,0 +1,503 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>IS445 Data Visualization, Fall 2022, Lecture 03</title>
+
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reset.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/theme/white.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/5.11.2/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/reveal.js-copycode@1.0.1/plugin/copycode/copycode.css">
+
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
+
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown data-separator="---" data-separator-notes="^Note:" style="vertical-align:top;text-align:left" data-transition="none">
+                    <script type="text/template">
+                        ### Data Format and Image Representation
+                        
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        Matthew Turk & Esther Hsiao
+
+                        Data Visualization - Fall 2022
+
+                        Note:
+                        When you see a visualization, you read information from it.
+
+                        ---
+
+                        Remember to sign up on Campuswire if you haven't!
+                         - #general 
+                         - #questions
+                        
+                        ---
+
+                        ### Weekly Visualization Reports
+                        - Things you like/don't like
+                        - Things you think interesting
+
+                        ---
+                        ### Warm-up Activity
+                        
+                        https://www.music-map.com/arcade+fire
+                        
+                        - What is the visualization trying to show?
+                        - What are its methods?
+                        - What are the strengths / weaknesses?
+                        - What data is needed to create this visualization?
+
+                        Note:
+                        Methods
+                        - Compute similarity between musicians
+                        - Covert similarities to distances in the map
+
+                        strengths
+                        - straightforward, self-explaining
+                        weaknesses
+                        - cannot exactly tell how "similar" between two musicians
+
+                        If we think about the data for buliding this map
+                        - Musicians' names
+                        - Music genres
+                        - Listeners' data (e.g., music users listen to, time of playing the muisc)
+                        
+                    </script>
+                </section>
+                <section>
+                    <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/data2viz/data2viz_0.svg" width="3000"/>
+                </section>
+                <section data-markdown data-separator="---" data-separator-notes="^Note:" style="vertical-align:top;text-align:left;font-size:70%;" data-transition="none">
+                    <!-- script type="text/template" -->
+                    <textarea data-template>
+                        ## From data to visualization
+
+                        Before you draw a visualization from data…
+
+                        - What is the data format?    
+                        - How is the data organized?    
+                        - What is in the data?    
+                        
+                        When you draw the visualization
+
+                        - Where will the visualization go to (web, paper, report)?    
+                        - Representation of an image    
+
+                        Note:
+                        This is a note
+                        
+                        ---
+
+                        ## Data Format
+
+                        - TXT    
+                          - ASCII       
+                        - CSV/TSV    
+                           - Text, Tabular data    
+                        - JSON    
+                          - Text, Query-based    
+                        - HDF5    
+                           - Binary, Hierarchical data format    
+                        - SQL
+
+                        ---
+
+                        ## Organization
+
+                        On disk, the data is stored linearly    
+
+                        - Row-oriented storage
+                        - Column-oriented storage<br></br>      
+
+                        <table style="width:80%;font-size:75%;">
+                            <tr>
+                                <th></th>
+                                <th>Column 1</th>
+                                <th>Column 2</th>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Batman</td>
+                                <td>Black Hair</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Joker</td>
+                                <td>Green Hair</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3</td>
+                                <td>Lex Luthor</td>
+                                <td>Bald</td>
+                            </tr>
+                        </table>
+                        
+                        ---
+
+                        ## Row-oriented storage
+                        
+                        <table style="width:80%;font-size:75%;">
+                            <tr>
+                                <th></th>
+                                <th>Column 1</th>
+                                <th>Column 2</th>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Batman</td>
+                                <td>Black Hair</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Joker</td>
+                                <td>Green Hair</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3</td>
+                                <td>Lex Luthor</td>
+                                <td>Bald</td>
+                            </tr>
+                        </table>
+                        
+                        Successive *fields* for a single *record* are adjacent.
+                        
+                        <table style="width:80%;font-size:75%;">
+                            <tr>
+                                <td>Batman</td>
+                                <td>Black Hair</td>
+                                <td>Joker</td>
+                                <td>Green Hair</td>
+                                <td>Lex Luthor</td>
+                                <td>Bald</td>
+                            </tr>
+                        </table>
+
+                        ---
+
+                        ## Column-oriented storage
+
+                        <table style="width:80%;font-size:75%;">
+                            <tr>
+                                <th></th>
+                                <th>Column 1</th>
+                                <th>Column 2</th>
+                            </tr>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Batman</td>
+                                <td>Black Hair</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Joker</td>
+                                <td>Green Hair</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3</td>
+                                <td>Lex Luthor</td>
+                                <td>Bald</td>
+                            </tr>
+                        </table>
+
+                        Successive *records* for a single *field* are adjacent.
+
+                        <table style="width:80%;font-size:75%;">
+                            <tr>
+                                <td>Batman</td>
+                                <td>Joker</td>
+                                <td>Lex Luthor</td>
+                                <td>Black Hair</td>
+                                <td>Green Hair</td>
+                                <td>Bald</td>
+                            </tr>
+                        </table>
+
+                        ---
+                        
+                        ## CSV/TSV
+
+                        - Delimited text file    
+                        - Comma and tab are common delimiters    
+                        - Row-oriented    
+                        - Row-size can vary    
+                        - May or may not have headers    
+                        - Not self-explained    
+                        - Usually has a [readme file](https://think.cs.vt.edu/corgis/csv/airlines/)
+
+                        ```
+                        "ATL","Atlanta, GA: Hartsfield-Jackson Atlanta International","2003/06","6","June","2003","1009","1275","3217","17","328","American Airlines Inc.,JetBlue Airways,Continental Air Lines Inc.,Delta Air Lines Inc.,Atlantic Southeast Airlines,AirTran Airways Corporation,America West Airlines Inc.,Northwest Airlines Inc.,ExpressJet Airlines Inc.,United Air Lines Inc.,US Airways Inc.","11","216","5843","27","23974","30060","61606","68335","118831","518","268764","19474"\n
+                        ```
+
+                        ---
+
+                        ## JSON
+                        - JavaScript Object Notation
+                        - Text-based format representing structured data based on JavaScript object syntax
+                        - Row-oriented   
+                        - Data stored in JSON can have different types
+                            - String
+                            - Number
+                            - JSON object (dict)
+                            - Array (list)
+                            - Boolean
+                            - Null
+                        
+                        ---
+
+                        ```JSON
+                        [
+                        ...
+                        {
+                            "Airport":{"Code": "ATL","Name": "Atlanta, GA: Hartsfield-Jackson Atlanta International"},
+                            "Time":{"Label": "2003/06", "Month": 6, "Month Name": "June", "Year": 2003},
+                            "Statistics":{"# of Delays": {"Carrier": 1009,"Late Aircraft": 1275,"National Aviation System": 3217,"Security": 17,"Weather": 328},
+                            "Carriers": {"Names": "American Airlines Inc.,JetBlue Airways,Continental Air Lines Inc.,Delta Air Lines Inc.,Atlantic Southeast Airlines,AirTran Airways Corporation,America West Airlines Inc.,Northwest Airlines Inc.,ExpressJet Airlines Inc.,United Air Lines Inc.,US Airways Inc.","Total": 11},
+                            "Flights": {"Cancelled": 216,"Delayed": 5843,"Diverted": 27,"On Time": 23974,"Total": 30060},
+                            "Minutes Delayed": {"Carrier": 61606,"Late Aircraft": 68335,"National Aviation System": 118831,"Security": 518,"Total": 268764,"Weather": 19474}}
+                        },
+                        ...
+                        ]
+                        ```
+
+                        [ ] indicate an array    
+                        { } indicate a JSON object     
+                        " " indicate a string    
+                        A number (e.g., 6 in "Month":6)
+
+                        ---
+
+                        ## HDF5
+                    
+                        Hierarchical Data Format (HDF)    
+                        - File directory like structure
+                        ```
+                        data.h5
+                            Group1/
+                                Dataset1
+                                Dataset2
+                            Group2/
+                                Dataset3
+                                Dataset4
+                        ```
+                        - Flexible data types   
+                        - Self-describing   
+                        - Key/val metadata    
+                        - Chunk stored   
+                        - Good for storing complex, large data 
+                        
+                        Note:
+                        Play with data
+                        https://jupyterhub.ischool.illinois.edu/jupyter/hub/home
+
+                        ---
+
+                        ## Representations of an image
+                        - Raster representation
+                        - Vector representation
+                        
+                        ---
+                        ## Raster representation     
+                        - Save what you draw
+                        - Drawing coloring art in pixels
+                        - Image build from pixels and each pixel represents a color    
+                        - Lose image quality when you resize the image    
+                        - Common file extension    
+                            - JPG (lossy compression)    
+                            - PNG (lossless compression, transparent background)    
+                            - GIF    
+
+                        ---
+                        ## Draw a line
+                        
+                        plot((x_start, x_end), (y_start, y_end), linewidth=1)
+                        
+                        <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/line_0.svg" width="50%" style="margin-left:50%;">
+
+                        ---
+                        ## Draw a line
+
+                        Convert to 8x8 image
+                        
+                        <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/line_8_0.svg" width="50%" style="margin-left:50%;">
+                        
+                        ---
+                        ## Draw a line
+
+                        Convert to 8x8 image
+                        
+                        <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/line_8_1.svg" width="50%" style="margin-left:50%;">
+
+                        ---
+                        ## Draw a line
+
+                        Convert to 16x16 image
+                        
+                        <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/line_16_0.svg" width="50%" style="margin-left:50%;">
+                        
+                        ---
+                        ## Draw a line
+
+                        Convert to 16x16 image
+                        
+                        <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/line_16_1.svg" width="50%" style="margin-left:50%;">
+
+                        ---
+
+                        ## Draw a line
+
+                        Convert to 32x32 image
+                        
+                        <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/line_32_0.svg" width="50%" style="margin-left:50%;">
+                        
+                        ---
+                        ## Draw a line
+
+                        Convert to 32x32 image
+                        
+                        <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/line_32_1.svg" width="50%" style="margin-left:50%;">
+
+                        ---
+                        ## Vector representation    
+                        - Save how you draw
+                        - Drawings (e.g., paths, patterns, shapes) based upon mathematical formulas    
+                        - Display does not exist until it is “rendered”.
+                        - Does not lose image quality when you rescale the image
+                        - SVG, PDF, EPS
+
+                        ---
+                        
+                        <table style="width:100%">
+                            <tr>
+                                <td style="width:50%;text-align:left;">PNG</td>
+                                <td style="width:50%;text-align:left;">SVG</td>
+                            </tr>
+                            <tr>
+                                <td style="width:50%;text-align:left;">
+                                    <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/my_png.png" width="100%" style="margin-left:0%;">
+                                </td>
+                                <td style="width:50%;text-align:left;">
+                                    <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/my_svg.svg" width="100%" style="margin-left:10%;">
+                                </td>
+                            </tr>
+                        </table>
+
+                        ---
+
+                        ## PNG 
+                        Rescale the display
+                        <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/my_png.png" width="50000%" style="margin-left:10%;">
+
+                        ---
+
+                        ## SVG 
+                        Rescale the display
+
+                        <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/my_svg.svg" width="50000%" style="margin-left:10%;">
+                        
+                        ---
+
+                        ## Raster representation
+
+                        <table style="width:80%;font-size:75%;">
+                            <tr>
+                                <th></th>
+                                <th>1 line</th>
+                                <th>2 lines</th>
+                                <th>30 lines</th>
+                                <th>1000 lines</th>
+                            </tr>
+                            <tr>
+                                <td>600x600</td>
+                                <td>45 kb</td>
+                                <td>45 kb</td>
+                                <td>45 kb</td>
+                                <td>45 kb</td>
+                            </tr>
+                            <tr>
+                                <td>1200x1200</td>
+                                <td>180 kb</td>
+                                <td>180 kb</td>
+                                <td>180 kb</td>
+                                <td>180 kb</td>
+                            </tr>
+                            <tr>
+                                <td>2400x2400</td>
+                                <td>720 kb</td>
+                                <td>720 kb</td>
+                                <td>720 kb</td>
+                                <td>720 kb</td>
+                            </tr>
+                        </table>
+                        (uncompressed, 1-bit images)
+
+                        ---
+
+                        ## Vector representation
+
+                        <table style="width:80%;font-size:75%;">
+                            <tr>
+                                <th></th>
+                                <th>1 line</th>
+                                <th>2 lines</th>
+                                <th>30 lines</th>
+                                <th>1000 lines</th>
+                            </tr>
+                            <tr>
+                                <td>600x600</td>
+                                <td>5 bytes</td>
+                                <td>10 bytes</td>
+                                <td>150 bytes</td>
+                                <td>5000 bytes</td>
+                            </tr>
+                            <tr>
+                                <td>1200x1200</td>
+                                <td>5 bytes</td>
+                                <td>10 bytes</td>
+                                <td>150 bytes</td>
+                                <td>5000 bytes</td>
+                            </tr>
+                            <tr>
+                                <td>2400x2400</td>
+                                <td>5 bytes</td>
+                                <td>10 bytes</td>
+                                <td>150 bytes</td>
+                                <td>5000 bytes</td>
+                            </tr>
+                        </table>
+                        (uncompressed, single precision)
+                    
+                    </textarea>
+                </section>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/markdown/markdown.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/highlight/highlight.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/notes/notes.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+
+
+			});
+		</script>
+    </body>
+</html>
