@@ -42,21 +42,21 @@
                 
                 - Types of data
                 - Operational Palette
-                - Represent data in a visualization
+                - Components can be controlled in a visualization.
 
                 ---
 
                 ## Types of data
 
                 <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/data2viz/data2viz_1.svg" width="3000"/>
-                
+
                 - Numerical/quantitative
                 - Categorical/qualitative
 
                 Note:
+                - Discover problems in the data
                 - Understanding data types is important beacuse the data type decides what operations are allowed to perform on the values.
                 - Focus on the two baisc types
-
 
                 ---
 
@@ -100,8 +100,8 @@
                 - We have went through how data is stored and the basic types of data.
                 
                 In the process of making a visualization,
-                - Sometimes we may want to plot a subset of the data    
-                - We may also don't want to plot the data as it is (e.g., highly skewed data)
+                - Sometimes it is not desired to plot the data as-is. 
+                - One outlier that differs from other observations very large and make all the other observations squeezed at the bottom of the graph.
 
                 ---
                 
@@ -163,6 +163,10 @@
 
                 ---
 
+                [If we make this plot without filters...](https://www.informationisbeautiful.net/visualizations/the-hollywood-insider/)
+                
+                ---
+
                 ### Sampling
                 - What's the purpose of sampling?
                 - Distribution of group members in the sample and in the population.
@@ -172,6 +176,7 @@
                   - Regular sampling with an interval of 3 but the data happens to be [1, 2, 2, 1, 2, 2, ....]
 
                 ---
+
                 ### Mutation Operations
                 - Injective operations    
                     What do you observe from the graph?
@@ -273,13 +278,22 @@
 
                 ---
                 ### Scales and Scaling
-                Displaying a quantity requires assigning to it a given representation.     
-                A common mechanism for doing this is to vary the color of a particular region or set of display units with respect to the quantity expressed in those units.
+                Displaying a quantity requires assigning to it a given representation. 
+                - Color varies according to the quantity (e.g. heatmap)
+                - Size varies according to the quantity (e.g. bubble plot)
 
                 In mathematical notation, we first "normalize" our data value by assigning to a range:   
                 g(v)→v′∈[0,1]    
                 and then, given a color mapping function, assign to this a given color:    
                 f(v′)→(R,G,B)    
+
+                ---
+                Reflection activity:
+                [Billionaires in the US states](https://www.visualcapitalist.com/mapped-the-wealthiest-billionaire-in-each-u-s-state-in-2022/)
+
+                - What types of data can be observed from the visualization?
+                - What operations mighted be performed on the data?
+                  - For example, scaling
 
                 ---
                 - Does this data describe a geometric object?
@@ -288,7 +302,10 @@
                 - Is there a *quantity* associated with the data?
                 - Are the datapoints *continuous* along one or more dimensions?
 
-                https://www.informationisbeautiful.net/visualizations/the-hollywood-insider/
+                ---
+                Lab time!
+
+                https://jupyterhub.ischool.illinois.edu/jupyter/hub/home
                 
               </textarea>
             </section>
