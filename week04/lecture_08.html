@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>IS445 Data Visualization, Fall 2022, Lecture 03</title>
+
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reset.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/theme/white.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/5.11.2/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/reveal.js-copycode@1.0.1/plugin/copycode/copycode.css">
+
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
+
+    </head>
+    <body>
+        <div class="reveal">
+          <section class="slides">
+            <section data-markdown data-separator="---" data-separator-notes="^Note:" style="vertical-align:top;text-align:left" data-transition="none">
+                <script type="text/template">
+                    ### Introduction to bqplot
+                    
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    Matthew Turk & Esther Hsiao
+
+                    Data Visualization - Fall 2022
+
+                    Note:
+
+                </script>
+            </section>
+            <section data-markdown data-separator="---" data-separator-notes="^Note:" style="vertical-align:top;text-align:left;font-size:70%;" data-transition="none">
+              <textarea data-template>
+                ## Set up Environment 
+                https://jupyterhub.ischool.illinois.edu/jupyter/hub/home
+
+                Terminal:
+                - pip install bqplot==0.12.2
+                - jupyter labextension list
+                - jupyter labextension install bqplot
+
+                ---
+                ## bqplot
+
+                - Interactive plotting system for Jupyter
+                  - traitlets and widgets
+                - 2-D visualization
+                - pyplot like API provides similar functions as in matplotlib.pyplot
+                - Object-oriented API for constructing interactive visualizations
+                  - Every object is actually an interactive widget.
+
+                Note:
+                - Create an object for each individual graph components such as figure, axis, scales
+                - Each of object behaves as a interactive widget 
+                - Headache for starters beacuse the document is not very clear and lack examples
+
+                ---
+                ## bqplot objects
+                `Scale`
+                  - Relationships between data values
+                  - LinearScale(), OrdinalScale(), LogScale()    
+                
+                `Axis`       
+                  - Where to place data
+
+                `Marks`
+                  - Marks (e.g., lines and bars) in the figure
+                
+                `Figure` 
+                 - `marks`, `axes`, and `interaction`
+
+                ---
+                ## Marks
+                - Lines()
+                - Scatter()
+                - Bars()
+                - Hist()
+
+                [Avaliable Marks](https://bqplot.readthedocs.io/en/latest/api_documentation.html#marks)
+
+                Note:
+                Things work quite similar as matplotlib, except for Hist()
+                
+                ---
+                ## Colors
+                `colors=`
+                ```
+                clr_list = ['#FF0000', '#0000FF']
+                bqplot.Bars(x=x, y=y, scales={'x':x_sc, 'y':y_sc}, colors=clr_list)
+                ```
+                - Expects HTML color but some named colors work     
+                  clr_list = ['red'] works     
+                  clr_list = ['tab:red'] does not work      
+
+                `ColorScale()`
+                 - Mapping from numbers to colors
+                 - Normalize data and map values to a color map
+                
+                `ColorAxis()`
+                 - Visual representation of a color scale
+                
+                Note:
+                ColorAxis: A bar of colors showing the mapping between data values and colors
+
+                ---
+                ## Example
+
+                ```python [1-5|6-9|10-12|13-14|15-17]
+                import bqplot
+                import numpy as np
+
+                x = ['Lion', 'Rabbit', 'Bird']
+                y = [100, 200, 300]
+                
+                x_sc = bqplot.OrdinalScale()
+                y_sc = bqplot.LinearScale()
+                
+                ax_x = bqplot.Axis(scale = x_sc, label = 'X value')
+                ax_y = bqplot.Axis(scale = y_sc, label = 'Y value', orientation = 'vertical')
+                
+                bars = bqplot.Bars(x = x, y = y, scales = {'x': x_sc, 'y': y_sc})
+                
+                fig = bqplot.Figure(marks = [bars], axes = [ax_x, ax_y])
+                display(fig)
+
+                ```   
+                
+                Note:
+                Verbose, planned ahead.
+
+                ---
+                ## Interactivity
+                - Mouse over 
+                  - Tooltip: Text showing information
+                - Selection
+                - Pan-zoom
+
+                - Interactive dashboard (next week)
+                  - VBox(), HBox()
+                  - Linking and brushing
+                
+                Note:
+                Interactivity between plots
+                
+                ---
+                ## Assignment 3
+                
+                Using matplotlib, construct a visualization of the Illinois Building Inventory that communicates the following information:
+
+                - Relationship between the year acquired and the year constructed
+                - Total square footage as a function of congressional district
+                - Average square footage per floor as a function of congressional district
+                - Square footage for the five most common departments as a function of year
+                
+                Each component will be worth 5 points and must be a completely communicative visualization -- including labels and a one paragraph writeup of successes and shortcomings in your approach.     
+                Submit a notebook to Canvas. All source code must be in these files.
+
+                ---
+                Lab time!
+
+                https://jupyterhub.ischool.illinois.edu/jupyter/hub/home
+                
+              </textarea>
+            </section>
+          </section>
+        </div>
+      </body>>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/markdown/markdown.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/highlight/highlight.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/notes/notes.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+        markdown: {smartypants: true},
+
+			});
+		</script>
+    </body>
+</html>
