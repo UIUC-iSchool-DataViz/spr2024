@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>IS445 Data Visualization, Fall 2022, Lecture 03</title>
+
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reset.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/theme/white.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/5.11.2/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/reveal.js-copycode@1.0.1/plugin/copycode/copycode.css">
+
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
+
+    </head>
+    <body>
+        <div class="reveal">
+          <section class="slides">
+            <section data-markdown data-separator="---" data-separator-notes="^Note:" style="vertical-align:top;text-align:left" data-transition="none">
+                <script type="text/template">
+                    ### bqplot and interactivity
+                    
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    Matthew Turk & Esther Hsiao
+
+                    Data Visualization - Fall 2022
+
+                    Note:
+
+                </script>
+            </section>
+            <section data-markdown data-separator="---" data-separator-notes="^Note:" style="vertical-align:top;text-align:left;font-size:70%;" data-transition="none">
+              <textarea data-template>
+                ## Environment 
+                https://jupyterhub.ischool.illinois.edu/jupyter/hub/home
+
+                Terminal:
+                - pip list
+                  - pip install bqplot==0.12.2
+                - jupyter labextension list
+                  - jupyter labextension install bqplot
+
+                ---
+                ## Visualization Report
+
+                ---
+                ## Warm-Up Activity
+                https://exoplanets.nasa.gov/eyes-on-exoplanets/#/planet/Kepler-22_b/
+                
+                Explore the interactivie visualization:
+                - What is the visualization trying to show?
+                - What are the interactivities in the visualization?
+
+                ---
+                ## Comparison
+                - Among items
+                  - One variable, one category
+                  - Two variables, one category
+                  <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/bar_width.svg" width="100%">
+                
+                ---
+                ## Comparison
+                - Among items
+                  - One variable, more than one category
+                  - Two variables, more than one category
+                  <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/bar_width2.svg" width="100%">
+                  
+                ---
+                ## Comparison
+                - Change over time
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/splitting.svg" width="100%">
+
+
+                ---
+                ## Interactivie Visualizations
+                - Tools we've introduced
+                  - ipywidgets
+                  - bqplot
+                - Putting visualizations on the web
+                  - Notebooks    
+                    Binder: Executable environment for notebooks on Github
+                  - Javascript    
+                    vega-lite, D3
+                
+                ---
+                ## What we've introduced
+                - Visualizations
+                  - Common plot types (lines, bars, hist)
+                  - Plot components
+                  - Manipulation (aggregation, filtering)
+                
+                - Interactivity
+                  - Tooltip, Pan-zoom, selection
+                    
+                ---
+                ## What's more
+                - Plot types
+                  - Map, Choropleth map
+                  - Heatmap
+                - Data 
+                  - Time-series (`DateScale`)
+                - Interactivity
+                  - Dashboard
+                    - HBox(), VBox()
+                    - Dynamically change multiple plots
+                  
+                ---
+                ## Interactivity: Parameters
+                - Point characteristics
+                - Scale
+                - X and Y limits
+                - Click and drag
+                - Zoom
+
+                ---
+                ## Interactivity: Linking and Brushing
+                - Linked views
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/link_brush/0.svg" width="100%">
+                
+                ---
+                ## Interactivity: Linking and Brushing
+                - Linked views
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/link_brush/1.svg" width="100%">
+                    
+                ---
+                ## Interactivity: Linking and Brushing
+                - Linked views
+                - Concurrent filtering
+
+                **Filter: var_1 < 10**
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/link_brush/2.svg" width="100%">
+
+                ---
+                ## Interactivity: Linking and Brushing
+                - Linked views
+                - Concurrent filtering   
+                
+                **Filter: var_1 < 10**
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/link_brush/3.svg" width="100%">
+
+                ---
+                ## Interactivity: Linking and Brushing
+                - Linked views
+                - Index-based selection
+                
+                **Select: name in ('point_1', 'point_2', 'point_3')**
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/link_brush/1.svg" width="100%">
+                
+                ---
+                ## Interactivity: Linking and Brushing
+                - Linked views
+                - Index-based selection
+                
+                **Select: name in ('point_1', 'point_2', 'point_3')**
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/example_viz/link_brush/4.svg" width="100%">
+
+                ---
+                Lab time!
+
+                https://jupyterhub.ischool.illinois.edu/jupyter/hub/home
+                
+              </textarea>
+            </section>
+          </section>
+        </div>
+      </body>>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/markdown/markdown.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/highlight/highlight.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/notes/notes.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+        markdown: {smartypants: true},
+
+			});
+		</script>
+    </body>
+</html>
