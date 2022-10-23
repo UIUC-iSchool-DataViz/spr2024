@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>IS445 Data Visualization, Fall 2022</title>
+
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reset.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/theme/white.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/5.11.2/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/reveal.js-copycode@1.0.1/plugin/copycode/copycode.css">
+
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
+
+    </head>
+    <body>
+        <div class="reveal">
+          <section class="slides">
+            <section data-markdown data-separator="---" data-separator-notes="^Note:" style="vertical-align:top;text-align:left" data-transition="none">
+                <script type="text/template">
+                  ### Comparison and GeoPandas 
+                  
+                  <br></br>
+                  <br></br>
+                  Matthew Turk & Esther Hsiao
+
+                  Data Visualization - Fall 2022
+
+                  Note:
+
+                </script>
+            </section>
+            <section data-markdown data-separator="---" data-separator-notes="^Note:" style="vertical-align:top;text-align:left;font-size:70%;" data-transition="none">
+              <textarea data-template>
+                ## Visualization Report
+
+                ---
+                ## Today
+                Technology vs technique
+                - We have briefly introduced how to present comparisons in a visualization
+                - How do we compare the elements that compose a whole?
+
+                GeoPandas
+                - Based on pandas
+                - Add support for geographic data to pandas objects
+                
+                Environment
+                - https://jupyterhub.ischool.illinois.edu/jupyter/hub/home
+                - !pip install geopandas
+
+                ---
+                # Composition
+                <table style="width:80%;font-size:60%;">
+                  <tr>
+                      <th>Usage Description</th>
+                      <th>Building count</th>
+                      <th>%</th>
+                  </tr>
+                  <tr>
+                      <td>Assembly</td>
+                      <td>948</td>
+                      <td>10.70</td>
+                  </tr>
+                  <tr>
+                      <td>Business</td>
+                      <td>715</td>
+                      <td>8.07</td>
+                  </tr>
+                  <tr>
+                      <td>Detention & Correc</td>
+                      <td>731</td>
+                      <td>8.25</td>
+                  </tr>
+                  <tr>
+                    <td>Education</td>
+                    <td>258</td>
+                    <td>2.91</td>
+                  </tr>
+                  <tr>
+                    <td>Health Care</td>
+                    <td>382</td>
+                    <td>4.31</td>
+                  </tr>
+                  <tr>
+                    <td>Industrial</td>
+                    <td>1174</td>
+                    <td>13.25</td>
+                  </tr>
+                  <tr>
+                    <td>Mercantile</td>
+                    <td>77</td>
+                    <td>0.87</td>
+                  </tr>
+                  <tr>
+                    <td>Not provided</td>
+                    <td>4</td>
+                    <td>0.05</td>
+                  </tr>
+                  <tr>
+                    <td>Public</td>
+                    <td>1</td>
+                    <td>0.01</td>
+                  </tr>
+                  <tr>
+                    <td>Residential</td>
+                    <td>636</td>
+                    <td>7.18</td>
+                  </tr>
+                  <tr>
+                    <td>Storage</td>
+                    <td>2231</td>
+                    <td>25.17</td>
+                  </tr>
+                  <tr>
+                    <td>Unusual</td>
+                    <td>1684</td>
+                    <td>19.00</td>
+                  </tr>
+                  <tr>
+                    <td>Utiility & Miscellan</td>
+                    <td>21</td>
+                    <td>0.25</td>
+                  </tr>
+                  <tr>
+                    <td><b>SUM</b></td>
+                    <td><b>8862</b></td>
+                    <td><b>100</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+                ---
+                # Composition
+                Don't use a pie chart.     
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/comparison_viz/pie_0.svg" width="100%">
+
+                ---
+                # Composition
+                Don't use a pie chart.     
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/comparison_viz/pie_1.svg" width="100%">
+
+                ---
+                # Composition
+                Don't use a pie chart.     
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/comparison_viz/pie_2.svg" width="80%">
+                
+                ---
+                # Alternatives
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/comparison_viz/donut.svg" width="80%">
+
+                ---
+                # Alternatives
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/comparison_viz/treemap.svg" width="80%">
+
+                ---
+                # Alternatives
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/comparison_viz/barh.svg" width="100%">
+
+                ---
+                # Alternatives
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/comparison_viz/bar.svg" width="100%">
+
+                ---
+                # Comparison
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/comparison_viz/bar_group.svg" width="90%">
+
+                ---
+                # Comparison
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/comparison_viz/bar_stack.svg" width="90%">
+
+                ---
+                # Comparison
+                Not a good idea     
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/comparison_viz/pie_subplots.svg" width="25%">
+
+                ---
+                # Comparison
+                <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/comparison_viz/line_area.svg" width="100%">
+
+                ---
+                # Hierarchical data
+                - Sunburst (e.g., [plotly](https://plotly.com/python/sunburst-charts/))  
+
+                  <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/comparison_viz/sunburst.svg" width="50%">
+                - Nested box area (e.g., [callgrind](https://kcachegrind.github.io/html/Shot3.html) ) - for showing flowchart like structures for things like code programs
+
+                ---
+                # GeoPandas
+                - Add support for geographic data to pandas objects
+                - ```GeoSeries``` and ```GeoDataFrame```
+
+                - Read file: ```gdf = geopandas.read_file()```
+                  - GeoJSON, CSV, ESRI, etc.
+                - Min and max coordinates of each shape: ```gdf.bounds```
+                - Center of each shape: ```gdf.centroid```
+                - Coordinate reference system (CRS): ```gdf.crs```
+                  - The system for flattening spatial location to coordinates
+                
+                ---
+                # GeoPandas
+                Make a plot: 
+                ```
+                gdf.plot()
+                plt.show()
+                ```
+                OR
+                ```
+                fig, ax = plt.subplots()
+                gdf.plot(ax=ax)
+                plt.show()
+                ```
+                ---
+                Lab time!
+
+                https://jupyterhub.ischool.illinois.edu/jupyter/hub/home
+                
+              </textarea>
+            </section>
+          </section>
+        </div>
+      </body>>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/markdown/markdown.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/highlight/highlight.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/notes/notes.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+        markdown: {smartypants: true},
+
+			});
+		</script>
+    </body>
+</html>
