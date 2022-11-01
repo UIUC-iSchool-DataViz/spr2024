@@ -3,12 +3,12 @@ title: Geo Data and Vega-lite API
 layout: lecture
 tags:
   - javascript
-  - iodide
+  - starboard
   - geo
 include_vega: true
 setup_script: setup_script.js
 description: >-
-  We'll discuss a bit about updating vega-lite visualizations using their API in Iodide, and we'll move on to looking at GeoJSON data in Jupyter and what it looks like.
+  We'll discuss a bit about updating vega-lite visualizations using their API in Starboard, and we'll move on to looking at GeoJSON data in Jupyter and what it looks like.
 ---
 
 ## Visualization Reports
@@ -72,6 +72,20 @@ somePromiseObject.then( function(resolvedObject) {
 
 (This type of syntax, for deferring actions to the future, is very common in
 Javascript.)
+
+---
+
+## Accessing embedded vega-lite with Starboard
+
+In some cases, you can use what's known as an `await` command to wait for the
+promise to return successfully.  We can use this in starboard:
+
+```javascript
+var embedded = await vegaEmbed("#vis", yourVlSpec);
+```
+
+We will attempt to use both forms, to provide information on using vega-lite in
+various different contexts.
 
 ---
 
@@ -189,7 +203,7 @@ embedded4.then( function(res) {
 
 ## Example 1
 
-We're going to set up a contrived example.  In [iodide](https://iodide.io/) we will:
+We're going to set up a contrived example.  In [iodide](https://starboard.gg/) we will:
 
  1. Create a simple HTML report
  2. Create a listener button for adding a new data point
