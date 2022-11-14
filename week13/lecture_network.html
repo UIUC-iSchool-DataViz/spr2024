@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+      <title>IS445 Data Visualization, Fall 2022</title>
+
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reset.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/theme/white.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/5.11.2/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/reveal.js-copycode@1.0.1/plugin/copycode/copycode.css">
+
+      <script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
+
+    </head>
+      <body>
+        <div class="reveal">
+          <section class="slides">
+            <section data-markdown data-separator="---" data-separator-notes="^Note:" style="vertical-align:top;text-align:left" data-transition="none">
+                <script type="text/template">
+                  ### Network Visualization 
+                  
+                  <br></br>
+                  <br></br>
+                  Matthew Turk & Esther Hsiao
+
+                  Data Visualization - Fall 2022
+
+                  Note:
+
+                </script>
+            </section>
+            <section data-markdown data-separator="---" data-separator-notes="^Note:" style="vertical-align:top;text-align:left;font-size:70%;" data-transition="none">
+              <textarea data-template>
+                ## Visualization Report
+                <br></br>
+                [IS 527 Network Analysis](https://ischool.illinois.edu/degrees-programs/courses/is527)
+
+                Environment
+                - https://jupyterhub.ischool.illinois.edu/jupyter/hub/home
+                - !pip install igraph
+
+                ---
+                ## Visualizing network data
+                - Data points and connections between points
+                  - Citation network, organizational structure, etc.
+                - Node-link diagrams
+                - Hierarchical diagrams
+
+                Note: CEO > team managers > team members
+                
+                ---
+                ## Node-link diagrams
+                - Node (or vertex)
+                  - zero to many edges 
+                - Edge (or link or arc)
+                  - A link between two nodes
+                  - directed or undirected
+                  - can have a weight
+                
+                ---
+                ## Hierarchical diagrams
+                <style>
+                  .container{
+                      display: flex;
+                  }
+                  .first-column {
+                      width: 40%;
+                      padding: 0 10px 0 0;
+                      float: left;
+                  }
+
+                  .second-column {
+                      width: 60%;
+                      padding: 40px 10px 0 0;
+                      float: right;
+                  }
+                </style>
+                  
+                <div class="container">
+                <div class="first-column">
+                  <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/network_viz/tree.svg" width="100%">
+                </div>
+                <div class="second-column">
+                  Tree structure<br>
+                  Single path (one incoming edge)<br>  
+                  Ordered<br>
+                    - Top-to-bottom<br>
+                    - Left-to-right<br>
+                    - Inside-out<br>
+                </div>
+                ---
+                ## Layout
+                <style>
+                  .container{
+                      display: flex;
+                  }
+                  .first-column {
+                      width: 40%;
+                      padding: 0 10px 0 0;
+                      float: left;
+                  }
+                  .second-column {
+                      width: 20%;
+                      padding: 0 10px 0 0;
+                      float: left;
+                  }
+                  .third-column {
+                      width: 40%;
+                      padding: 50px 10px 0 0;
+                      float: left;
+                  }
+                </style>
+                  
+                <div class="container">
+                <div class="first-column">
+                  - Ring (circle) <br>
+                  - Star (ego network) <br>
+                  - Tree <br>
+                  - Force-directed <br>
+                  
+                </div>
+                <div class="second-column">
+                  <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/network_viz/ring.svg" width="80%">
+                </div>
+                <div class="third-column">
+                  <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/network_viz/ego.svg" width="100%">
+                </div>
+                
+
+                ---
+                ## Force-directed graphs
+                - Based on the structure of the graph (i.e., connections between nodes)
+                - Attractive force and repulsive force
+                  - Adjacent nodes are attracted to each other
+                  - Repulsive force between nodes for avoding overlapping node positions
+                - Visualizing communities (clustered structure)
+                  - Nodes having denser relations are attracted to each other
+                - [Example](https://observablehq.com/@d3/force-directed-graph)
+                - Not deterministic (see example in notebook)
+
+                Note:
+                - How nodes are linked with each other
+                - No domain knowledge is involved.
+                - Node attributes are not considered
+                - Depends on the initial state
+
+                ---
+                ## Adjacency Matrix 
+                - Nodes are listed along X and Y axes
+                - Edges are represented as cell values
+
+                ---
+                ## Adjacency Matrix (undirected network)
+                <style>
+                  .container{
+                      display: flex;
+                  }
+                  .first-column {
+                      width: 40%;
+                      padding: 0 10px 0 0;
+                      float: left;
+                  }
+
+                  .second-column {
+                      width: 60%;
+                      padding: 40px 10px 0 0;
+                      float: right;
+                  }
+                </style>
+                  
+                <div class="container">
+                <div class="first-column">
+                  <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/network_viz/undirected_net.svg" width="100%">
+                </div>
+                <div class="second-column">
+                  <table style="width:80%;font-size:75%;">
+                    <tr>
+                      <th></th>
+                      <th>Node 0</th>
+                      <th>Node 1</th>
+                      <th>Node 2</th>
+                      <th>Node 3</th>
+                    </tr>
+                    <tr>
+                      <th>Node 0</th>
+                      <th>-</th>
+                      <th>1</th>
+                      <th>1</th>
+                      <th>0</th>
+                    </tr>
+                    <tr>
+                      <th>Node 1</th>
+                      <th>1</th>
+                      <th>-</th>
+                      <th>0</th>
+                      <th>0</th>
+                    </tr>
+                    <tr>
+                      <th>Node 2</th>
+                      <th>1</th>
+                      <th>0</th>
+                      <th>-</th>
+                      <th>0</th>
+                    </tr>
+                    <tr>
+                      <th>Node 3</th>
+                      <th>0</th>
+                      <th>0</th>
+                      <th>0</th>
+                      <th>-</th>
+                    </tr>
+                  </table>
+                  <br></br>
+                  <table style="width:80%;font-size:75%;">
+                    <tr>
+                      <th></th>
+                      <th>Node 0</th>
+                      <th>Node 1</th>
+                      <th>Node 2</th>
+                      <th>Node 3</th>
+                    </tr>
+                    <tr>
+                      <th>Node 0</th>
+                      <th>-</th>
+                      <th>1</th>
+                      <th>1</th>
+                      <th>0</th>
+                    </tr>
+                    <tr>
+                      <th>Node 1</th>
+                      <th></th>
+                      <th>-</th>
+                      <th>0</th>
+                      <th>0</th>
+                    </tr>
+                    <tr>
+                      <th>Node 2</th>
+                      <th></th>
+                      <th></th>
+                      <th>-</th>
+                      <th>0</th>
+                    </tr>
+                    <tr>
+                      <th>Node 3</th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th>-</th>
+                    </tr>
+                  </table>
+                </div>
+                
+                </div>
+                ---
+                ## Adjacency Matrix (directed network)
+                <style>
+                  .container{
+                      display: flex;
+                  }
+                  .first-column {
+                      width: 40%;
+                      padding: 0 10px 0 0;
+                      float: left;
+                  }
+
+                  .second-column {
+                      width: 60%;
+                      padding: 40px 10px 0 0;
+                      float: right;
+                  }
+                </style>
+                  
+                <div class="container">
+                <div class="first-column">
+                  <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/network_viz/directed_net.svg" width="100%">
+                </div>
+                <div class="second-column">
+                  <table style="width:80%;font-size:75%;">
+                    <tr>
+                      <th></th>
+                      <th>Node 0</th>
+                      <th>Node 1</th>
+                      <th>Node 2</th>
+                      <th>Node 3</th>
+                    </tr>
+                    <tr>
+                      <th>Node 0</th>
+                      <th>-</th>
+                      <th>1</th>
+                      <th>1</th>
+                      <th>0</th>
+                    </tr>
+                    <tr>
+                      <th>Node 1</th>
+                      <th>0</th>
+                      <th>-</th>
+                      <th>0</th>
+                      <th>0</th>
+                    </tr>
+                    <tr>
+                      <th>Node 2</th>
+                      <th>0</th>
+                      <th>0</th>
+                      <th>-</th>
+                      <th>0</th>
+                    </tr>
+                    <tr>
+                      <th>Node 3</th>
+                      <th>0</th>
+                      <th>0</th>
+                      <th>0</th>
+                      <th>-</th>
+                    </tr>
+                  </table>
+                </div>
+                </div>
+
+                ---
+                ## Adjacency Matrix (weighted network)
+                <style>
+                  .container{
+                      display: flex;
+                  }
+                  .first-column {
+                      width: 40%;
+                      padding: 0 10px 0 0;
+                      float: left;
+                  }
+
+                  .second-column {
+                      width: 60%;
+                      padding: 40px 10px 0 0;
+                      float: right;
+                  }
+                </style>
+                  
+                <div class="container">
+                <div class="first-column">
+                  <img data-src="https://raw.githubusercontent.com/TK-Hsiao/TK-Hsiao.github.io/master/network_viz/weighted.svg" width="100%">
+                </div>
+                <div class="second-column">
+                  <table style="width:80%;font-size:75%;">
+                    <tr>
+                      <th></th>
+                      <th>Node 0</th>
+                      <th>Node 1</th>
+                      <th>Node 2</th>
+                      <th>Node 3</th>
+                    </tr>
+                    <tr>
+                      <th>Node 0</th>
+                      <th>-</th>
+                      <th>1</th>
+                      <th>5</th>
+                      <th>0</th>
+                    </tr>
+                    <tr>
+                      <th>Node 1</th>
+                      <th>0</th>
+                      <th>-</th>
+                      <th>0</th>
+                      <th>0</th>
+                    </tr>
+                    <tr>
+                      <th>Node 2</th>
+                      <th>0</th>
+                      <th>0</th>
+                      <th>-</th>
+                      <th>0</th>
+                    </tr>
+                    <tr>
+                      <th>Node 3</th>
+                      <th>0</th>
+                      <th>0</th>
+                      <th>0</th>
+                      <th>-</th>
+                    </tr>
+                  </table>
+                </div>
+                </div>
+
+
+                ---
+                ## Tools
+                - iGraph (R & Python)
+                - NetworkX
+                - Pyvis.Network 
+                - bqplot.Graph
+                - D3
+
+                ---
+                Lab time!
+
+                https://jupyterhub.ischool.illinois.edu/jupyter/hub/home
+                
+              </textarea>
+            </section>
+          </section>
+        </div>
+      </body>>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/reveal.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/markdown/markdown.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/highlight/highlight.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/notes/notes.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+        markdown: {smartypants: true},
+
+			});
+		</script>
+    </body>
+</html>
