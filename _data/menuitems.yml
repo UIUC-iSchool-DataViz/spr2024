@@ -1,18 +1,4 @@
-- name: Campuswire
-  url: https://campuswire.com/c/G851982E3/feed
-  facollection: fab
-  faicon: fa-comment
-  weight: 20
-- name: JupyterHub
-  url: https://jupyterhub.ischool.illinois.edu/
-  facollection: fab
-  faicon: fa-python
-  weight: 30
 - name: Syllabus
   url: /syllabus
   faicon: fa-book
   weight: 10
-- name: Moodle
-  url: https://learn.illinois.edu/course/view.php?id=50825
-  faicon: fa-school
-  weight: 50

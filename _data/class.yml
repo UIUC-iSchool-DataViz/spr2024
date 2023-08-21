@@ -4,32 +4,29 @@ instructors:
     email: mjturk@illinois.edu
     office: Room 5115, 614 E Daniel
     office_hours: Wednesday 3-4PM and by appointment
+tas:
   -
     name: Tzu-Kun Hsiao
     email: tkhsiao2@illinois.edu
-    office: Zoom and campuswire
-    office_hours: Monday afternoon and by appointment
-tas:
+    office: Zoom
+    office_hours: By appointment
   -
-    name: Mohit Gupta
-    email: mohitg2@illinois.edu
-    office: Online!
-    office_hours: Appointment
+    name: Tali Zacks
+    email: tzacks2@illinois.edu
+    office: Zoom
+    office_hours: By appointment
 course:
   name: Data Visualization
   number: IS445
-  semester: Fall 2022
+  semester: Fall 2023
   section: ACG-ACU
-  location: Materials Science and Engineering Building (1304 W Green St) room 119
-  time: Tuesday and Thursday, 11:00AM-12:20PM
+  location: Loomis Lab 136
+  time: Monday 9AM-11:50AM
   credit_hours: 4
 urls:
   -
-    name: Campuswire
-    url: https://campuswire.com/c/G851982E3/feed
-  -
     name: Course Materials
-    url: https://uiuc-ischool-dataviz.github.io/fall2022-acg-acu/
+    url: https://uiuc-ischool-dataviz.github.io/fall2023-acg-acu/
   -
     name: Github
-    url: https://github.com/UIUC-iSchool-DataViz/fall2022-acg-acu/
+    url: https://github.com/UIUC-iSchool-DataViz/fall2023-acg-acu/
