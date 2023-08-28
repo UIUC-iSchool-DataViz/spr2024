@@ -448,7 +448,7 @@ Convert to an 32x32 image.
 
 ## Let's draw a line.
 
-<div class="fig-container" data-style="height: 600px;" data-file="./figures/drawline.html" data-markdown=true>
+<div class="fig-container" data-style="height: 600px;" data-file="figures/drawline.html" data-markdown=true>
 </div>
 
 ---
@@ -666,7 +666,7 @@ how we draw with it, let's do some things to it.
 
 <div class="left" data-markdown="true">
 
-![](file:///home/mturk/Documents/Journal/classes/is445%20-%20data%20visualization/slides/04-data-operations/images/palette.svg)<!-- .element: style="height: 20em;" -->
+![](images/palette.svg)<!-- .element: style="height: 20em;" -->
 
 </div>
 
