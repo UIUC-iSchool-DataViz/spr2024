@@ -1,15 +1,14 @@
 ---
-title: Data Storage, Manipulation, and Drawing
+title: Scaling, Colors, and Colormaps
 layout: lecture
 tags:
-  - operations
-  - distributions
   - scaling
-  - dataformats
-  - drawing
+  - colors
+  - colormaps
+  - transformations
 description: >-
-  How are values transformed from 0's and 1's into values we can manipulate and understand?  When we draw something on a screen, how do we represent that internally, and how is that translated into pixels?  What operations can we do on data? 
-date: 2023-08-28
+  How are values transformed from 0's and 1's into values we can manipulate and understand?  When we draw something on a screen, how do we represent that internally, and how is that translated into pixels?  What operations can we do on data? How do colors work?  What are the different ways we can map colors to values?  What should we keep in mind when doing this?
+date: 2023-09-11
 ---
 
 ## Scaling Data
