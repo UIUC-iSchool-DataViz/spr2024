@@ -1,3 +1,4 @@
+---
 title: Traitlets, Widgets, Interactivity and bqplot
 layout: lecture
 tags:
