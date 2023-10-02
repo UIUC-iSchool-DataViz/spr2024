@@ -4,6 +4,11 @@ visible: true
 icon: undraw_metrics_gtu7.svg
 notitle: true
 examples:
+  - filename: vega_example_gross.html
+    type: vega-lite
+    title: vega-lite example with IMDB data
+    description: Applying filtering, hconcat, layers and selections to IMDB data
+examples:
   - filename: vega_example_4.html
     type: vega-lite
     title: vega-lite example 4
