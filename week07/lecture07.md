@@ -1,23 +1,13 @@
 ---
-aliases: []
+title: Beginning Geospatial Visualization
+layout: lecture
 tags:
-  - talks/mine
-created: 2023-10-09
-modified: 2023-10-09
-theme: white
-transition: none
-center: false
-fragments: true
-hash: true
-width: 1024
-height: 768
-margin: 0.02
-defaultTemplate: "[[blank-slide]]"
-backgroundTransition: none
-dependencies:
-  - src: https://cdn.jsdelivr.net/npm/reveald3@1.5.5/reveald3.js
-reveald3:
-  - runLastState: false
+  - geo
+  - bqplot
+  - cartopy
+  - maps
+description: >-
+  We start out learning about the basics of geospatial visualization, including applying this in bqplot and cartopy.
 ---
 
 # Beginning Geographic Visualization
