@@ -1,10 +1,10 @@
 ---
 layout: week
-visible: false
+visible: true
 icon: undraw_forming_ideas_0pav.svg
 notitle: true
 examples: 
-  - filename: lecture13_examples.ipynb
+  - filename: lecture07_examples.ipynb
     type: ipynb
     title: Maps and time series
     description: We start out making some time series visualizations in bqplot, then begin moving to overlay them on maps.
