@@ -324,5 +324,5 @@ We will update our visualization to include:
 
 Let's get some Flags up there!
 
-https://uiuc-ischool-dataviz.github.io/data/state_abbreviations.json
+https://uiuc-ischool-dataviz.github.io/fall2023-acg-acu/data/state_abbreviations.json
 https://github.com/OpenGovDataMirror/F_CivilServiceUSA_us-states/tree/master/images/flags
