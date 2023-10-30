@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "data/us-10m.json",
+    "format": {"type": "topojson", "feature": "counties"}
+  },
+  "transform": [
+    {"calculate": "pad(toString(datum.id), 5, '0', 'left')", "as": "stringId"},
+    {
+      "lookup": "stringId",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties-recent.csv"
+        },
+        "key": "fips",
+        "fields": ["county", "state", "cases"]
+      }
+    }
+  ],
+  "params": [
+    {"select": {"type": "point", "on": "click"}, "name": "selected_county"}
+  ],
+  "vconcat": [
+    {
+      "mark": "geoshape",
+      "width": 700,
+      "height": 600,
+      "projection": {"type": "albersUsa"},
+      "encoding": {
+        "tooltip": [{"field": "county"}, {"field": "cases"}],
+        "color": {
+          "field": "cases",
+          "type": "quantitative",
+          "scale": {"type": "log"}
+        }
+      }
+    },
+    {
+      "transform": [
+        {"filter": {"param": "selected_county"}},
+        {"calculate": "datum.county + ': ' + datum.cases", "as": "caption"}
+      ],
+      "mark": {"type": "text", "fontSize": 18},
+      "encoding": {"text": {"field": "caption", "type": "nominal"}}
+    }
+  ]
+}
