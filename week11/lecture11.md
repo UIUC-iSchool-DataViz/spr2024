@@ -1,5 +1,4 @@
 ---
----
 title: Changing Data in Vega-Lite and d3
 layout: lecture
 include_vega: true
