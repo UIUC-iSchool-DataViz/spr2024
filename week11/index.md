@@ -1,8 +1,10 @@
 ---
 layout: week
-visible: false
+visible: true
 ---
 
-# Advanced vega-lite and types of charts
+# Updating data, intro to D3, and learning Starboard
 
-This week we examined some methods for processing data in vega-lite versus pre-processing data in Python, and we explored a few more types of charts.
+We'll learn about easier ways to connect Python and Javascript, and we'll talk about updating data in vega-lite.
+
+We'll also learn a little bit about d3.
