@@ -6,8 +6,6 @@ notitle: true
 examples: []
 ---
 
-# Scientific Viz
+# Scientific Viz and D3
 
-This week we covered some principles of Scientific Visualization.
-
-Our notebook is at [https://observablehq.com/d/6e27e1395aec55b7](https://observablehq.com/d/6e27e1395aec55b7)
+This week we covered some principles of Scientific Visualization, with a tad bit of D3 thrown in.

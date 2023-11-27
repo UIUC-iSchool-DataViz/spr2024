@@ -81,6 +81,8 @@ await import('https://cdn.jsdelivr.net/npm/vega-embed@latest');
 
 In production, you'll want to avoid using `@latest` and instead pin to a specific version.
 
+---
+
 ## Fetching Data with Starboard
 
 To fetch data with Starboard, you can use the `fetch` command in a javascript cell:
@@ -155,6 +157,7 @@ my_schema['data']['values']
 
 and we have modified, in place, our data values.
 
+---
 
 ## Accessing Pyodide in Starboard
 
@@ -173,6 +176,7 @@ var b_js = pyodide.globals.get('b');
 
 Note that Starboard and Pyodide know how to convert between Javascript [TypedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) and NumPy [`ndarray`](https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html) objects.
 
+---
 
 ## Starboard and Objects
 
@@ -191,8 +195,6 @@ c = ExampleClass('hi')
 my_obj = pyodide.globals.get('c')
 my_obj.get_name();
 ```
-
----
 
 ---
 
