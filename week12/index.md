@@ -1,6 +1,6 @@
 ---
 layout: week
-visible: false
+visible: true
 icon: undraw_medical_research_qg4d.svg
 notitle: true
 examples: []

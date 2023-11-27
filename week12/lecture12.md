@@ -403,6 +403,7 @@ We will very frequently run into the case where we call something, and supply a 
 
 In one, we are setting the value static; in the other, we base the value on the datapoint supplied.
 
+---
 
 ## Concepts in d3: Let's make circles
 
