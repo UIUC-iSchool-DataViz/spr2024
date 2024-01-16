@@ -1,6 +1,6 @@
 ---
 layout: week
-visible: true
+visible: false
 ---
 
 # Updating data, intro to D3, and learning Starboard

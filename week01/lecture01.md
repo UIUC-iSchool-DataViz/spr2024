@@ -8,8 +8,9 @@ description: >-
   The syllabus for the course, along with discussions about "what"
   visualizations are, why we make them, and how to orient yourself in the
   course.
-date: 2023-08-21
+date: 2024-01-16
 ---
+
 
 ## Land Acknowledgment
 
@@ -22,33 +23,33 @@ Website.](https://chancellor.illinois.edu/land_acknowledgement.html)
 
 <!-- .slide: class="vertical_center" -->
 
+
 ## Basics
 
-9:00AM-11:50AM on Mondays, Loomis Lab room 136
+3:30PM-4:50PM on Tuesdays and Thursdays, 501 E Daniel St
 
 ### Instructors & TAs
 
 Matthew Turk - `mjturk@illinois.edu`  
-Office Hours: Wednesday 3-4PM and **by appointment**
+Office Hours: Wednesday 2-3PM and **by appointment**
 
-Tzu-Kun (Esther) Hsiao - `tkhsiao2@illinois.edu`
+Tzu-Kun (Esther) Hsiao - `tkhsiao2@illinois.edu`  
 
 Tali Zacks - `tzacks2@illinois.edu`
 
-https://uiuc-ischool-dataviz.github.io/fall2023-acg-acu/
+https://uiuc-ischool-dataviz.github.io/spr2024/
 
 ---
-
 <!-- slide template="[[blank-slide]]" -->
 
 ## Summary of Locations
 
-* Grades and assignments will be on [Canvas](https://learn.illinois.edu/).
-* Course repo is at [UIUC-iSchool-DataViz/fall2023-acg-acu](https://github.com/UIUC-iSchool-DataViz/fall2023-acg-acu/), automatically built at [uiuc-ischool-dataviz.github.io/fall2023-acg-acu/](https://uiuc-ischool-dataviz.github.io/fall2023-acg-acu). Lecture notes, notebooks, data and course info will be placed there.
-* Canvas is the best place to ask questions.
+- Grades and assignment links will be on [Canvas](https://canvas.illinois.edu/).
+- PrairieLearn: https://us.prairielearn.com/pl/course_instance/148453/ where assignments will be completed.
+- Course repo is at [UIUC-iSchool-DataViz/spr2024](https://github.com/UIUC-iSchool-DataViz/spr2024/), automatically built at [uiuc-ischool-dataviz.github.io/spr2024/](https://uiuc-ischool-dataviz.github.io/spr2024). Lecture notes, notebooks, data and course info will be placed there.
+- Slack: https://is445spring2024.slack.com/ - the best place to ask questions in a `#homeworkX-questions` channel (or `#general` for general questions)
 
-You are invited to clone the repo, fork and submit changes (typos, etc!), and  
-to use any information in it in the future.
+You are invited to clone the repo, fork and submit changes (typos, etc!), and to use any information in it in the future.
 
 ---
 
@@ -58,44 +59,23 @@ We are going to take a quiz!  (Don't worry, there are no wrong answers.)
 
 On your laptop, open a notepad or scratch text editor.  Answer these questions:
 
-* What are the most memorable movies you saw over the last year?
-* Do you prefer cats or dogs?
-* How would you quantify your experience in visualization?
+- What are the most memorable movies you saw over the last year?
+- Do you prefer cats or dogs?
+- How would you quantify your experience in visualization?
+- How many hours do you spend online in classes each week?
 
 ---
 
 ## "Quiz"!
 
-I'm going to send you into breakout rooms and give you about ten minutes.
+**In a group of about 4 or 5 people**, visualize the results of your group's collective "data.""
 
-http://bit.ly/3OLREdI
+- What are the most memorable movies you saw over the last year?
+- Do you prefer cats or dogs?
+- How would you quantify your experience in visualization?
+- How many hours do you spend online in classes each week?
 
-On your group's number, visualize your results.
-
----
-
-## Viz Systems We Will Cover
-
-* [matplotlib](https://matplotlib.org)
-* [vega-lite](https://vega.github.io/vega-lite)
-* [D3](https://d3js.org/)
-* [bqplot](https://bqplot.readthedocs.io)
-
-There'll be a few more along the way, but these are the main ones.  Each touches on different aspects of visualization differently.
-
----
-
-## Tools We Will Use
-
-* [GitHub](https://github.com/)
-* [Jupyter](https://jupyter.org/)
-* [Observable](https://observablehq.com/)
-
-And we might use a few of:
-
-* [Iodide](https://iodide.io/) (or a descendant)
-* [Glitch](https://glitch.com/)
-* [Colaboratory](https://colab.research.google.com/)
+And, be sure to say hi to each other!
 
 ---
 
@@ -107,16 +87,15 @@ If you want to use your own Python setup, I recommend:
 1. Ensure that Jupyterlab is installed and working
 1. Ensure that you have matplotlib, pandas and numpy installed and working.
 
-We are working to provide a managed installation of Jupyter with the
-appropriate Python stack available.
+However, PrairieLearn has a working installation you may also choose to use.
 
 ---
 
 ## Syllabus
 
-* Weeks 1-5: Basics of visualization
-* Weeks 6-10: Interactivity and Viz Types
-* Weeks 11-15: Platforms and dimensionality
+- Weeks 1-5: Basics of visualization
+- Weeks 6-10: Interactivity and Viz Types
+- Weeks 11-15: Platforms and dimensionality
 
 notes:
 This is a rough syllabus!  These are many of the topics we will cover, but
@@ -132,29 +111,29 @@ representing data in different ways.
 
 ## Weeks 1-5
 
-* How are files laid out?
-* What is in our operational palette?
-* Basics of using Javascript, Python, and writing JSON
-* Basic quantitative visualizations
+- How are files laid out?
+- What is in our operational palette?
+- Basics of using Javascript, Python, and writing JSON
+- Basic quantitative visualizations
 
 ---
 
 ## Weeks 6-10
 
-* Distributions of values in different dimensions
-* Simple interactivity
-* Reactive programming
-* Colors, images
-* Comparisons across datasets
+- Distributions of values in different dimensions
+- Simple interactivity
+- Reactive programming
+- Colors, images
+- Comparisons across datasets
 
 ---
 
 ## Weeks 11-15
 
-* Scientific Visualization
-* Alternative visualization platforms
-* Dashboarding
-* Group projects
+- Scientific Visualization
+- Alternative visualization platforms
+- Dashboarding
+- Group projects
 
 notes:
 Toward the end of class we are going to have a slightly more free-form set of
@@ -165,10 +144,10 @@ more group work and collaboration than the preceding assignments.
 
 # Class Mission
 
-Your role as a *consumer* of visualizations should change to also include the
-perspective of a *producer* of visualizations.
+Your role as a _consumer_ of visualizations should change to also include the
+perspective of a _producer_ of visualizations.
 
-You should be comfortable reading *and* writing imagery.
+You should be comfortable reading _and_ writing imagery.
 
 notes:
 We will be discussing this as the semester goes on, but the principal outcome I
@@ -184,13 +163,13 @@ consuming information visually.
 
 ## The Things I Want You To Take Away
 
-* You should know the basics of how to manipulate data -- aggregations,
+- You should know the basics of how to manipulate data -- aggregations,
   filtering, and other operations.
-* I want you to know *some* of the packages that are out there to visualize
+- I want you to know _some_ of the packages that are out there to visualize
   data.  These will mostly be Python-based, with a couple in Javascript.
-* You won't learn how to use dashboarding software in detail.  Instead, we
+- You won't learn how to use dashboarding software in detail.  Instead, we
   will talk about the different operations that go into dashboarding software.
-* By the end of the course, you will have had the opportunity to look at and
+- By the end of the course, you will have had the opportunity to look at and
   build visualizations in several different domains and understand how to
   interpret, critique and improve them.
 
@@ -209,35 +188,34 @@ get in the way of the underlying meaning?
 1. What tools and ecosystems are available for visualizing data?
 1. What systems can be put in place to generate visualizations rapidly and with high-fidelity representation?
 
+
 ---
 
 ## Structure of Class
 
-* First half of Lecture: topic introduction, some lecturing
-* Break for 10 minutes
-* Second half of Lecture: interactive code-a-long
+- Topic introduction and lecture (60-80 minutes, usually Tuesday)
+- Hands-on, in-class coding (Tuesday and Thursday)
+- Lab time (usually Thursday)
+- Wrap-up (as needed)
 
-This isn't the first time we've taught this course, but we are always trying new things.  This semester, we're going to be focusing much more on separating apart the theory and the practice of visualization.
-![structure-of-class 2023-08-18 15.06.16.excalidraw.svg](00-class-overview/images/structure-of-class%202023-08-18%2015.06.16.excalidraw.svg)
+This isn't the first time we've taught this course, but we are always trying new things.  This semester, we're going to be focusing much more on separating apart the theory and the practice of visualization, and we're also going to be using PrairieLearn so that we can try out different tools.
+![[structure-of-class 2023-08-18 15.06.16.excalidraw.svg]]
 
 notes:
-This structure will likely be deviated from during the course, but in general
-we will start with lecture, take a break, then continue with collaborative or
-hands-on exercises using group coding.
+This structure will likely be deviated from during the course, but in general we will start with lecture, take a break, then continue with collaborative or hands-on exercises using group coding.
 
-During the group coding, I might lead the class in some visualization in
-Python, Javascript, or something else.  During this section, I expect that
-students will *follow along* with what is going on -- typing in the specific
-commands, and maybe even trying different things as we go.  It is not meant to
-simply be a "performance" of coding, but instead an opportunity to learn.
+During the group coding, I might lead the class in some visualization in Python, Javascript, or something else.  During this section, I expect that students will *follow along* with what is going on -- typing in the specific commands, and maybe even trying different things as we go.  It is not meant to simply be a "performance" of coding, but instead an opportunity to learn.
 
 ---
 
 ## Grading
 
-* 40% Standard assignments in prose or code form
-* 30% Weekly visualization reports
-* 30% Final project
+- 45% Standard assignments in prose or code form (see syllabus about 'required' assignments)
+- 20% Lab assignments which allow for "real time" checking of answers and feedback
+- 5% Quizzes on material covered in class
+- 30% Final project
+
+**We will drop the lowest homework score, however there are some required assignments.**
 
 notes:
 Your weekly assignments will take different forms.  The first assignment will
@@ -249,32 +227,41 @@ group project that touches on coding as well as visual design.
 
 ---
 
-## Weekly Visualization Reports
+## Homework Summary
 
-Every week, you are to turn in a visualization you have found in the media
-(newspapers, magazines, online journalism) and a brief summary of something you like/don't like,
-think is interesting, etc.
-
-*These are meant to be easy points:* No more than 2-3 sentences are needed in your description.
-
-Each week, one of you will at random be asked to describe the visualization you picked to the class.
+- Mix of prose and code
+- Assigned on Canvas, usually completed on PrairieLearn
+- Grading done by the instructional team with occasional feedback from PrairieLearn
+- 45% of grade, with the lowest score dropped except for required assignments
+- Total of 9 homeworks in the course.
 
 ---
 
-## Assignments (not necessarily weekly)
+## Labs Summary
 
-* Weekly, assigned in class, collected following class
-* Prose assignments: deconstruction or analysis of a visualization or a dataset.
-* Coding assignments: Jupyter/JSMD/etc notebooks following step by step
-  through collection and processing of data and the visualization of that
-  data
+- Code only
+- Assigned on Canvas, completed on PrairieLearn
+- Grading done "automatically" on PrairieLearn - see example autograding in Homework 1
+- Can be attempted multiple times before the due date
+- 20% of grade, no assignments dropped
+- 4-5 Labs in the course (4 now, another might be added later)
+
+---
+
+## Quizzes Summary
+
+- Cover material that is covered in class
+- Short answer/multiple choice
+- Graded automatically on PrairieLearn
+- Can be attempted multiple times _with decreasing scores_
+- ~12 Quizzes in the course
 
 ---
 
 ## Plagiarism
 
-* Plagiarism is about copying ideas.
-* Cite all code you utilize from elsewhere.
+- Plagiarism is about copying ideas.
+- Cite all code you utilize from elsewhere.
 
 notes:
 When programming, I expect that you will do things like search on the internet
@@ -287,16 +274,17 @@ Using snippets of code is fine -- but you may not copy large-scale amounts of
 code from other work (for example, other visualizations) and pass it off as
 your own.  Always cite, and be reasonable in what you utilize.
 
+
 ---
 
 ## Our tools
 
-* Python and Javascript
-* Jupyter and Jupyter notebooks on a Jupyterhub
-* The occasional usage of a shell such as bash
-* Javascript via Observable, or in console or webpage
-* Once in a while some git, and GitHub
-* Slack
+- Python and Javascript
+- Jupyter and Jupyter notebooks on a Jupyterhub
+- The occasional usage of a shell such as bash
+- Javascript via Starboard, or in console or webpage
+- Once in a while some git, and GitHub
+- Slack
 
 notes:
 You will be expected to write code in Python, and to learn the very basics of
@@ -304,18 +292,69 @@ Javascript.  Your projects may be turned in via git.  We will also utilize
 Slack for class communication.
 
 ---
+## Slack
 
-## Python
+We have a Slack channel for peer-to-peer discussion and questions about assignments.
 
-Python
+**You are not required to use Slack.**
+
+**No discussion of grades can happen in Slack.**
+
+https://is445spring2024.slack.com/
 
 ---
 
-## Jupyter
+## PrairieLearn
+
+We're going to be using [PrairieLearn](https://us.prairielearn.com/) this semester.  You can find our course instance at:
+
+https://us.prairielearn.com/pl/course_instance/148453/
+
+We'll try it out today and you can see how we can use it for in-class coding as well as for assignments.
 
 ---
 
-## Javascript
+## Viz Systems We Will Cover
+
+In approximate order:
+
+- [matplotlib](https://matplotlib.org/)
+- [bqplot](https://bqplot.readthedocs.io/)
+- [vega-lite](https://vega.github.io/vega-lite)
+- [d3](https://d3js.org/)
+
+There'll be a few more along the way.
+
+---
+
+## Slack
+
+We will be sharing a slack channel with the in-person class, so feel free to converse with them as well!
+
+- Team channel at `https://is445-fall2023.slack.com`
+    - `#general` : General announcements, place to ask questions
+    - `#random` : see a cool viz you want to share? This is the place!
+    - `#introduce-yourself` : where you want to "say hi" for Homework #1
+    - `#ASSIGNMENTX-questions` : each assignment will have [a channel](https://slack.com/help/articles/205239967-Join-a-channel) for asking questions specific to that assignment
+
+## Slack (cont)
+
+- Use the `@` sign appropriately: `@[person]`, `@here`, `@channel`
+- Web client, standalone client and mobile devices can access this team.
+- At the end of the semester, the team will be discontinued.
+- Please think carefully before direct messaging if you could ask in a public forum instead.
+- Conduct will be held to same standards as any educational venue.
+
+Slack turn-around time ~24 business hours or less (general/section channel), email ~3 business days or less
+
+Questions about grades should _always_ be over email.
+
+---
+
+## How do I access Slack?
+
+- Your @illinois email should enough to get you on, just go to: [https://is445spring2024.slack.com](https://is445spring2024.slack.com/)
+- Send me an email with _your_ email
 
 ---
 
@@ -329,7 +368,9 @@ There are probably at least three pathways to consider in this course:
 1. "I am thinking about a career in data viz."
 1. "I don't know/I am new to programming and I want to focus on that."
 
+
 ---
+
 
 ## Choose Your Own Adventure
 
@@ -337,10 +378,12 @@ There are probably at least three pathways to consider in this course:
 
 Strategy:
 
-* Look at the code and the extended examples
-* Do the Javascript parts
+- Look at the code and the extended examples
+- Do the Javascript parts
+
 
 ---
+
 
 ## Choose Your Own Adventure
 
@@ -348,11 +391,13 @@ Strategy:
 
 Strategy:
 
-* Look at the code and the extended examples
-* Do the Javascript parts
-* Read the optional texts and documents
+- Look at the code and the extended examples
+- Do the Javascript parts
+- Read the optional texts and documents
+
 
 ---
+
 
 ## Choose Your Own Adventure
 
@@ -360,18 +405,19 @@ Strategy:
 
 Strategy:
 
-* Look at the code, focus heavily on Python
-* Read the prep notebooks before class!
-* Do the Javascript parts *in class* and build on them for any homework
-* Come back to the optional texts and documents after the course is over
+- Look at the code, focus heavily on Python
+- Read the prep notebooks before class!
+- Do the Javascript parts _in class_ and build on them for any homework
+- Come back to the optional texts and documents after the course is over
+
+
 
 ---
 
 ## What is a visualization?
 
- > 
- > Computer-based *visualization* systems provide visual representations of
- > datasets designed to help people carry out tasks more effectively.
+> Computer-based *visualization* systems provide visual representations of
+> datasets designed to help people carry out tasks more effectively.
 
 <p class="right">
 Tamara Munzer, <i>Visualization Analysis & Design</i>
@@ -390,6 +436,7 @@ I really like this definition because it gives us a sense of purpose - i.e. that
 
 here for example, we might want to know the labels of bones or how they fit together
 
+
 ---
 
 ## What is a visualization?
@@ -398,7 +445,9 @@ Artistic representations are used to convey emotions:
 
 <!-- .slide: data-background-image="https://i.etsystatic.com/5150206/r/il/fe175b/1823842266/il_570xN.1823842266_b9y3.jpg" data-background-size="auto" -->
 
+
 ---
+
 
 ## What is a visualization?
 
@@ -410,7 +459,6 @@ notes:
 we will be using artistic concepts and elements of storytelling, BUT that is not our focus -- here we are TASK oriented.
 
 ---
-
 ### Data Viz is a big topic
 
 <!-- .slide: data-background-image="images/diagram_for_gradclass.png" data-background-size="auto 75%" -->
@@ -420,17 +468,18 @@ this is another way of looking at this.
 
 here is the overall diagram of the things we'll cover in this class -- you can see there are a lot of topics from different areas and they are all interconnected.
 
+
 ---
 
 ## Why visualize?
 
 Visualization **augments** human data analysis capabilities:
 
-* It enhances our ability to pattern find
-* It allows us to summarize data quickly
-* It allows us to search our data quickly
+- It enhances our ability to pattern find
+- It allows us to summarize data quickly
+- It allows us to search our data quickly
 
-(Conversely, why *wouldn't* we visualize?)
+(Conversely, why _wouldn't_ we visualize?)
 
 notes:
 Not everything suits itself to visualization -- and part of the reason for that
@@ -485,7 +534,9 @@ of angular distance from the fovea.  We have to think about this in
 
 There are 12 dots, can you count them all at the same time?
 
+
 ---
+
 
 ## Your brain does interpolation
 
@@ -495,7 +546,9 @@ There are 12 dots, can you count them all at the same time?
 1. Close left eye, keep looking at the cross
 1. Slowly move your head toward & away from screen until dot disappears
 
+
 ---
+
 
 ## Your brain does interpolation
 
@@ -516,8 +569,8 @@ compare this to how long it would take to spot differences in 2 songs - you'd ha
 
 ## Try it with sound
 
-* [Moonlight Sonata, 1](https://soundcloud.com/redreapergrell/beethoven-moonlight-sonata)
-* [Moonlight Sonata, 2](https://soundcloud.com/user-37232775/sets/beethoven-moonlight-sonata)
+- [Moonlight Sonata, 1](https://soundcloud.com/redreapergrell/beethoven-moonlight-sonata)
+- [Moonlight Sonata, 2](https://soundcloud.com/user-37232775/sets/beethoven-moonlight-sonata)
 
 Try doing the same thing with these on your own!
 
@@ -531,7 +584,9 @@ Also, you can look at how different each of the sound-bars are on each link and 
 
 ---
 
----
+
+
+----
 
 ## I need a volunteer!
 
@@ -542,17 +597,17 @@ notes:
 
 *Read these numbers:*
 
-|||
-|:-|-:|
-|2007-01-01|14233.2|
-|2007-04-01|14422.3|
-|2007-07-01|14569.7|
-|2007-10-01|14685.3|
-|2008-01-01|14668.4|
-|2008-04-01|14813.0|
-|2008-07-01|14843.0|
-|2008-10-01|14549.9|
-|2009-01-01|14383.9|
+|            |         |
+| :--------- | ------: |
+| 2007-01-01 | 14233.2 |
+| 2007-04-01 | 14422.3 |
+| 2007-07-01 | 14569.7 |
+| 2007-10-01 | 14685.3 |
+| 2008-01-01 | 14668.4 |
+| 2008-04-01 | 14813.0 |
+| 2008-07-01 | 14843.0 |
+| 2008-10-01 | 14549.9 |
+| 2009-01-01 | 14383.9 |
 
 notes:
 See what I mean?  It's a stunt.  You're supposed to hear these, or look at the
@@ -587,13 +642,14 @@ Statistics can be useful, but visualization generated context!
 
 Statistics can be useful, but visualization generated context!
 
+
 ---
 
 # Who are you visualizing for?
 
-* For yourself?
-* For a peer?
-* For someone else?
+- For yourself?
+- For a peer?
+- For someone else?
 
 notes:
 *Whenever* you build a visualization you need to think about the context that
@@ -605,9 +661,9 @@ you can assume on the part of your viewer.
 
 "Visualizing data" is not a strict subset of "making an image."
 
-* Collection of the data
-* Organization of that data
-* Representation of that data
+- Collection of the data
+- Organization of that data
+- Representation of that data
 
 notes:
 We will approach visualization as encompassing several different stages in the
@@ -617,10 +673,11 @@ collection, organization and representation of data.
 
 # Tenet 2:
 
-We tell lies to visualize, but we *must* be honest.
+We tell lies to visualize, but we _must_ be honest.
 
-* No representation is going to convey the entire complexity of a dataset.
-* Some representations are better than others.
+- No representation is going to convey the entire complexity of a dataset.
+- Some representations are better than others.
+
 
 ---
 
@@ -632,6 +689,7 @@ We tell lies to visualize, but we *must* be honest.
 
 notes:
 So let's first talk about how misleading visualizations can be. This 3D pie chart violates the "principle of proportional ink" which states that the number of pixels that represent a value should be proportional to the value. With the raised edge on the pie chart, the blue wedge gets way more ink than it deserves and you get a disproportionate sense of value.
+
 
 ---
 
@@ -645,6 +703,7 @@ notes:
 you can have a lot of absurd fun with data - but when data is presented in a visualization, people often believe the authority of it even if it's outlandish.
 
 This website has some good ideas of where to find sample datasets for upcoming homework assignments too!
+
 
 ---
 
@@ -685,11 +744,12 @@ here are a few more representations of data that you've probably run into!
 ---
 
 <!-- .slide: data-background-image="images/battery.svg" data-background-size="contain" -->
+
 <div style="padding-top: 15em;" data-markdown=true>
 
 1. Sensors read the current "fill" of the battery
-   * Analog / digital conversion
-   * Normalized with respect to expected "full"
+   - Analog / digital conversion
+   - Normalized with respect to expected "full"
 1. This is then scaled to a percentage
 1. The battery image is filled from left to right
 1. The image is then rasterized and displayed
@@ -700,10 +760,10 @@ here are a few more representations of data that you've probably run into!
 
 <!-- .slide: data-background-image="images/hearts_bw.svg" data-background-size="contain" -->
 
-* Some fixed maximum amount of damage
-* Each time damage is taken, decrement
-* Each time damage is reversed, increment
-* Display number of hearts as appropriate
+- Some fixed maximum amount of damage
+- Each time damage is taken, decrement
+- Each time damage is reversed, increment
+- Display number of hearts as appropriate
 
 ---
 
@@ -751,24 +811,22 @@ allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Our choices must be:
 
-* Deliberate
-* Informed
-* Motivated
-* Justifiable
-
+- Deliberate
+- Informed
+- Motivated
+- Justifiable
 ---
-
 ## Election Maps
 
 Mark Newman of the University of Michigan has created visualizations of the
 election maps from several of the most recent elections.  For more information
 and context, see his page http://www-personal.umich.edu/~mejn/election/2008/ .
 
-* [Map 1](http://www-personal.umich.edu/~mejn/election/2008/statemapredbluer1024.png)
-* [Map 2](http://www-personal.umich.edu/~mejn/election/2008/statepopredblue1024.png)
-* [Map 3](http://www-personal.umich.edu/~mejn/election/2008/countymapredbluer1024.png)
-* [Map 4](http://www-personal.umich.edu/~mejn/election/2008/countymappurpler1024.png)
-* [Map 5](http://www-personal.umich.edu/~mejn/election/2008/countycartpurple1024.png)
+- [Map 1](http://www-personal.umich.edu/~mejn/election/2008/statemapredbluer1024.png)
+- [Map 2](http://www-personal.umich.edu/~mejn/election/2008/statepopredblue1024.png)
+- [Map 3](http://www-personal.umich.edu/~mejn/election/2008/countymapredbluer1024.png)
+- [Map 4](http://www-personal.umich.edu/~mejn/election/2008/countymappurpler1024.png)
+- [Map 5](http://www-personal.umich.edu/~mejn/election/2008/countycartpurple1024.png)
 
 notes:
 These are great, but some criticisms might be that the color red is more apparent to the human eye than the color blue. And in the population-to-area adjusted maps, it's difficult to read for people used to geographic accuracy.
@@ -783,23 +841,24 @@ Map4 - percentage of votes by county
 
 Map5 - percentage of votes by county, weighted by population
 
+
 ---
 
 ## Assignment 1
 
-* Identify three visualizations in pop culture -- *not* academic literature.
+- Identify three visualizations in pop culture -- *not* academic literature.
   This could be, for instance, from:
-  * Movies / TV / Music videos
-  * Everyday life
-  * Advertisements
-* Describe each one in detail
-  * Where did the data come from?
-  * Is the data quantitative, qualitative, categorical, etc?
-  * How was the data processed before being displayed?
-  * What method was used to display that data?
-* Replicate the visualization with different, but similarly "shaped," data
-  * By hand is acceptable
-  * Computational methods should include source code
+  - Movies / TV / Music videos
+  - Everyday life
+  - Advertisements
+- Describe each one in detail
+  - Where did the data come from?
+  - Is the data quantitative, qualitative, categorical, etc?
+  - How was the data processed before being displayed?
+  - What method was used to display that data?
+- Replicate the visualization with different, but similarly "shaped," data
+  - By hand is acceptable
+  - Computational methods should include source code
 
 ---
 
@@ -843,6 +902,7 @@ terrain used in a movie, although it is contemporaneous with the famous
 "Unknown Pleasures" album cover that features a similar visualization of a
 pulsar.
 
+
 ---
 
 ## This week: Wrap-up
@@ -851,3 +911,4 @@ pulsar.
 1. We visualize data for ourselves, for our peers, and for others.
 1. Visualization is a series of steps that we take to produce a different
    representation of data.
+

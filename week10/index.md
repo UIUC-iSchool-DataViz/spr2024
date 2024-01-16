@@ -1,6 +1,6 @@
 ---
 layout: week
-visible: true
+visible: false
 ---
 
 # Finishing our lab, and types of charts
