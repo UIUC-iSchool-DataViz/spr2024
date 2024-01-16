@@ -1,6 +1,6 @@
 ---
 layout: week
-visible: false
+visible: true
 icon: undraw_data_trends_b0wg.svg
 notitle: true
 examples:
