@@ -199,7 +199,7 @@ get in the way of the underlying meaning?
 - Wrap-up (as needed)
 
 This isn't the first time we've taught this course, but we are always trying new things.  This semester, we're going to be focusing much more on separating apart the theory and the practice of visualization, and we're also going to be using PrairieLearn so that we can try out different tools.
-![[structure-of-class 2023-08-18 15.06.16.excalidraw.svg]]
+![[images/structure-of-class 2023-08-18 15.06.16.excalidraw.svg]]
 
 notes:
 This structure will likely be deviated from during the course, but in general we will start with lecture, take a break, then continue with collaborative or hands-on exercises using group coding.
@@ -331,11 +331,13 @@ There'll be a few more along the way.
 
 We will be sharing a slack channel with the in-person class, so feel free to converse with them as well!
 
-- Team channel at `https://is445-fall2023.slack.com`
+- Team channel at `https://is445spring2024.slack.com`
     - `#general` : General announcements, place to ask questions
     - `#random` : see a cool viz you want to share? This is the place!
     - `#introduce-yourself` : where you want to "say hi" for Homework #1
     - `#ASSIGNMENTX-questions` : each assignment will have [a channel](https://slack.com/help/articles/205239967-Join-a-channel) for asking questions specific to that assignment
+
+---
 
 ## Slack (cont)
 
