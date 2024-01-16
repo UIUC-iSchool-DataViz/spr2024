@@ -5,7 +5,8 @@ notitle: true
 ---
 
 # COVID-19 Statement
-In keeping with University and iSchool policy, all students are required to engage in appropriate behavior to protect the health and safety of our community.  If you are on campus, this includes wearing a facial covering properly, maintaining social distance (at least 6 feet from others at all times), disinfecting the immediate seating area, and using hand sanitizer.
+
+In keeping with University and iSchool policy, all students are required to engage in appropriate behavior to protect the health and safety of our community.  
 
 If you feel ill or are unable to come to class or complete class assignments due to issues related to COVID-19, including but not limited to: testing positive yourself, feeling ill, caring for a family member with COVID-19, or having unexpected child-care obligations, should contact their instructor immediately and cc their advisor.
 
@@ -14,8 +15,6 @@ Additionally, please be aware that there are mental health resources available t
  * https://mckinley.illinois.edu/medical-services/mental-health 
  * https://www.disability.illinois.edu/health/mental-health-resources 
  
-Finally, due to the current messiness of the COVID learning environment, we are allowing up to three late homeworks.  If you need to “use” one of your late homeworks email the instructor and/or the TA.  You do not need to provide any explanation for why you’d like to use one of your late homeworks.  You will then have until the end of the week -- the Sunday after the homework was due, midnight -- to turn in this assignment.  
-
 # Course Description
 
 Data visualization is crucial to conveying information drawn from models,
@@ -46,22 +45,23 @@ Website.](https://chancellor.illinois.edu/land_acknowledgement.html)
 
 This course is designed to give practical advice to students on
 communicating data through visualization.  This will involve a considerable
-amount of programming, and typically this programming will be done in Python.
-For the most part, our data will be quantitative and multi-dimensional.  The
-course will aim to provide both an understanding of what data visualizations
-communicate and a set of tools for constructing them yourself.
+amount of programming, and typically this programming will be done in Python,
+and some Javascript later in the course.  For the most part, our data will be
+quantitative and multi-dimensional.  The course will aim to provide both an
+understanding of what data visualizations communicate and a set of tools for
+constructing them yourself.
 
-The course will follow a common pattern within each three-hour instructional
-session.  The first 60-90 minutes will be focused on lecture, where concepts
-and tools will be introduced; typically, each class will focus on one type of
-visualization or class of visualization.  The remaining time will include
-exploration of a dataset, which may be independent or in groups, and then a
-wrap-up session at the end.
+The course will follow a common pattern within each single three-hour or two
+1.5 hour instructional session(s).  The first 60-90 minutes will be focused on
+lecture, where concepts and tools will be introduced; typically, each class
+will focus on one type of visualization or class of visualization.  The
+remaining time will include exploration of a dataset, which may be independent
+or in groups, and then a wrap-up session at the end.
 
 Students are expected to have laptops with them, as well as access to Python
-installations, and will be encouraged to participate in class.  Homework will
-be assigned and collected utilizing the Jupyter nbgrader extension or through
-other methods specified at time of submission.
+installations (we will go over how to setup the correct packages when necessary), and will be encouraged to participate in class.  Homework will
+be assigned and collected through
+other methods specified at time of submission like Canvas and [PrairieLearn](https://us.prairielearn.com/).
 
 The central themes of the course are:
 
@@ -72,13 +72,15 @@ The central themes of the course are:
 
 ## Pre- and Co-requisites
 
-None, although basic Python programming experience is assumed.  A brief
-introduction to Python will be presented during the course.
+None, although intermediate Python programming experience is assumed.  
+Generally the course assumes: an introductory knowledge of Python programming (equivalent to 1 grad course like IS430) + some experience with a Python-related project (and practice of debugging skills, googling errors).
+A brief
+introduction to several Python packages (e.g. Pandas) will be presented during the course. 
 
 # Course Materials
 
-There is no textbook for this course.  All course materials will be posted to
-the GitHub repository at https://github.com/UIUC-iSchool-DataViz/fall2022-acg-acu/ .
+There is no required textbook for this course.  All course materials will be posted to
+the GitHub repository at https://github.com/UIUC-iSchool-DataViz/spr2024/ .
 **Optional** textbook [Visualization Analysis and Design by Tamara Munzner](https://www.amazon.com/gp/product/1466508914/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1).  You can find a lot of the concepts from this textbook on [the books webpage](https://www.cs.ubc.ca/~tmm/vadbook/) and the [associated lecture slides](https://www.cs.ubc.ca/~tmm/talks.html#vadallslides).
 
 As the course progresses, a list of recommended readings will be generated for
@@ -88,13 +90,21 @@ suggested readings.
 
 # Writing Resources
 
-The iSchool Writing Resources is the in-house writing support team for graduate students at the iSchool.  They are here to help you with your writing and help you feel more comfortable and confident in your skills. The writing consultants are not professors or evaluators. They simply know the struggles of graduate and undergraduate-level writing and want to help you learn how to succeed and improve your writing skills. The iSchool writing consultants can help you with every step of the writing process. For detailed information on our services please visit our website:
-https://publish.illinois.edu/ischoolwritingresources/
-
+The iSchool Writing Resources is the in-house writing support team for graduate
+students at the iSchool.  They are here to help you with your writing and help
+you feel more comfortable and confident in your skills. The writing consultants
+are not professors or evaluators. They simply know the struggles of graduate
+and undergraduate-level writing and want to help you learn how to succeed and
+improve your writing skills. The iSchool writing consultants can help you with
+every step of the writing process. For detailed information on our services
+please visit our website:
 
 # Topic Calendar & Optional Reading
 
 Below is an approximate outline of the course and **optional** reading for each week.
+Note that the reading is meant to be *complementary* to the course, i.e. we won't 
+simply rehash what is in the reading during class.
+
 This course is always under development and  the
 course outline below is subject to some flexibility; students will be encouraged
 to provide feedback on the topics covered, particularly toward the end.  Topics
@@ -178,6 +188,35 @@ Please be aware that the consequences for plagiarism or other forms of academic 
 Criteria for grading homework assignments include (but are not limited to) creativity and the amount of original work demonstrated in the assignment. However, students are permitted to use and adapt the work of others, provided that the following guidelines are followed:
  * Use of other people’s material must not infringe the copyright of the original author, nor violate the terms of any licensing agreement. Know and respect the principles of fair use with respect to copyrighted material.
  * Students must scrupulously attribute the original source and author of whatever material has been adapted for the assignment. Summarize the changes or adaptations that have been made. Make plain how much of the assignment represents original work.
+ 
+*This applies to code as well* -- you are welcome to use online sources (e.g. StackOverflow) but be sure to include the URL in your code comments.
+
+Additionally, unless explicitly stated **do not** publish homework solutions online.
+
+
+## Policy on ChatGPT and other Large Language Models (LLMs)
+	
+The purpose of written and programming assignments is for students to apply what they have learned in class and learn how to validate statements and code or software.  The purpose is not to produce a “perfect” bit of text or code/software – there is no such thing!  Instead, we want to see how you problem-solve and what you think about a particular topic.
+
+LLMs can be useful for getting ideas about how to phrase text or to get started on a coding/software problem, however they are not meant to be used in place of your critical thinking skills.  Remember – it is more important that we hear your thoughts on topics than it is to generate 100% perfect English, and if you make use of LLMS, we expect significant extra work to be submitted with your submissions.  
+
+We will be implementing several policies related to the use of LLMS as listed below:
+
+ * **Acceptable Use:** Students are allowed to utilize ChatGPT or similar AI language models for course assignments or tests but in specific situations. Such usage should be restricted to brainstorming, seeking inspiration, expanding ideas, and improving writing, and must not constitute the primary source of content or answers.
+ * **No Direct Answers:** Students must not directly copy or paraphrase AI-generated text without proper attribution. Usage of ChatGPT or similar AI language models to directly answer specific questions or complete entire assignments is strictly prohibited. Students should rely on their knowledge and understanding, supplemented by AI tools for assistance.
+ * **Fact-Checking and Verification:** Students must critically assess and verify any information obtained through ChatGPT or similar AI language models before incorporating it into their work. Misleading or inaccurate information from the AI model should not be used in their submissions. Cross-reference the AI-generated information with reputable sources to verify its accuracy and reliability.  In particular, if you use an LLM you must:
+    * Include the LLM name and date of usage
+    * Include the prompt used
+    * Include your “validation plan” for each statement that you use from the LLM.  
+        * Writing: For example, if one wants to use the statement “The Sky is blue due to Rayleigh scattering.” as output by an LLM, links to research supporting this claim need to be included (and if those links have also been generated by the LLM, each will need to be verified).  
+        * Code/Software: you will need to create your own validation tests to run the code.  Include this in your submission along with a few sentences describing how your validation tests relate to the prompt.
+ * **Transparent Use and Academic Integrity:** Clearly indicate any sections or contents that are AI-generated.
+ * **Assignment-Specific Guidelines:** Each assignment or test may have specific instructions regarding the use of AI tools. Students must carefully review and comply with any guidelines provided.
+ * **Consequences of Misuse:** Violation of the class policy on the use of ChatGPT will be treated as an academic integrity breach and subject to disciplinary action as per the institution's guidelines.
+	
+The above class policy on the use of AI for course assignments were generated by ChatGPT, and selected, modified, and adapted by Dr. Koh on 8/3/23, and further modified by Dr. Naiman on 8/20/2023. The used prompts include: Give me class policy on the use of ChatGPT for course assignments and tasks; Come up with more specific class policy; and Give me examples of class policy on the use of ChatGPT for course assignments and tests.
+
+
 
 # Statement of Inclusion
 
@@ -195,18 +234,69 @@ This syllabus may be obtained in alternative formats upon request. Please contac
 
 # Assignments and Evaluation
 
-Students will be graded based on a combination of assignments (70%: 40% standard prose/code assignments and
-30% weekly visualization reports) and a final
-project (30%).  The final project will be a capstone to the course, and will
+## General Assignment Info
+Assignments in this course will be a mixture of coding/visualization work and
+written work.  These two may not be distinct assignments; students will be
+asked to describe their code and justify choices for making decisions with
+respect to visualizations.
+
+Students are expected, unless otherwise instructed, to be the principal authors
+of their code.  This does not mean they may not investigate resources such as
+StackOverflow, package documentation, etc; however, they *must* cite when
+resources (especially StackOverflow and other "recipe" sites) are utilized.
+
+Each assignment will be based on "correctness" and the narrative description of
+the process.  "Correctness" in this case indicates that the code runs without
+issue, results are produced, and each component of the assignment is completed.
+The narrative description of the process will be graded on grammar minimally and
+more so on completeness and thoughtfulness.
+
+The submission process for homeworks will be described by example during class
+before any homeworks are to be submitted.
+
+
+## Assignment Details
+
+Students will be graded based on a combination of assignments including weekly prose/code homeworks, coding-based automatically-graded labs, and automatically quizzes and a final project.
+The final project will be a capstone to the course, and will
 have greater flexibility in software packages and data sources.  This project
-will be introduced in Week 8.
+will be introduced around Week 8.
+
+Assignments will either be graded by the [PrairieLearn](https://us.prairielearn.com/) autograder for instant feedback, or by the instructional team after the assignment has been submitted.
+
+The breakdown of your grade will be:
+
+| 45% | Homework: ~weekly, prose or code, graded whole or partially by instructional team 
+| 20% | Labs: ~bi-monthly, code, graded automatically (can be attempted as many times as you want before the due date)
+| 5%  | Quizzes: ~weekly, short questions about lecture material, graded automatically (multiple attempts are allowed, however with decreasing scores)
+| 30% | Final project: prose and code, graded by instructional team
+
+### Other notes about assessments
+ * Unless otherwise specified, all assignments will be completed on the [PrairieLearn platform](https://us.prairielearn.com/).
+ * There will be opportunities for extra credit in the homework and final project portions.  
+ * The *maximum* homework score is fixed at 45% (even with extra credit included).
+ * Your lowest homework score will be dropped, however, we will not drop:
+   * Homework \#1 (introduction, installations, etc)
+   * Github Pages Setup Homework (Homework \#4)
+   * Starboard & Jekyll Page Setup Homework (Homework \#5)
+   * Starboard OR Jekyll Page Homework (Homework \#7 or \#8) -- i.e. you need to do AT LEAST one of these assignments
+   
+
+
+
+<!--
+There are several homework assignments which are **required** to pass the course:
+ * Any installation/package test assignments (Part of Homework #1, Homework #5, and Homework #7) with a grade of 85% or better on *each* assignment portion
+ * Final-project preparatory assignments: Homework #6, *either* Homework #9 *or* Homework #10 with a grade of 50% or better on *each* assignment portion
+
+ 
+Failure to submit these assignments above these grading thresholds will automatically lead to a failing grade in the course.
 
 **In summary, your grades consist of:**
 
-| 40% | Standard assignments in prose or code form
-| 30% | Weekly visualization reports
+| 50% | Standard assignments in prose or code form (50% is the MAX grade, even with extra credit)
+| 20% | Weekly visualization labs
 | 30% | Final project
-
 
 Assignments in this course will be a mixture of coding/visualization work and
 written work.  These two may not be distinct assignments; students will be
@@ -237,6 +327,13 @@ be collected electronically.
 The submission process for homeworks will be described by example during class
 before any homeworks are to be submitted.
 
+Submissions will be in PDF and/or .ipynb (Jupyter notebook) format, and, when 
+appropriate, a datafile needed to run the notebook file.  If coding is 
+required for the assignment, you will *not* get full points if you do not 
+submit the notebook file.  If the code requires a dataset and this is not 
+included in your submission you will not get full credit.  Files should be 
+uploaded individually, no *.zip files will be accepted.
+
 Each assignment will be based on "correctness" and the narrative description of
 the process.  "Correctness" in this case indicates that the code runs without
 issue, results are produced, and each component of the assignment is completed.
@@ -246,8 +343,9 @@ more so on completeness and thoughtfulness.
 ### Grading Policy
 
 All assignments are required for all students, aside from one homework (lowest HW grade will be dropped). 
+<!-- Note that the Syllabus Quiz is in the homework grading category, but will *not* be droppable. -->
 Completing all assignments is
-not a guarantee of a passing grade.  You must do homework, visualization reports, and final to 
+not a guarantee of a passing grade.  You must do homework, visualization labs, quizzes, and final project to 
 receive a passing grade. Late or incomplete assignments will not be given full credit
 unless the student has contacted the instructor prior to the due date of the
 assignment (or in the case of emergencies, as soon as practicable).
@@ -255,18 +353,31 @@ assignment (or in the case of emergencies, as soon as practicable).
 
 **Grading Scale:**
 
-| 94-100       | A
-| 90-93        | A-
-| 87-89        | B+
-| 83-86        | B
-| 80-82        | B-
-| 77-79        | C+
-| 73-76        | C
-| 70-72        | C-
-| 67-69        | D+
-| 63-66        | D
-| 60-62        | D-
-| 59 and below | F
+| above 94        | A
+| 90-93.99        | A-
+| 87-89.99        | B+
+| 83-86.99        | B
+| 80-82.99        | B-
+| 77-79.99        | C+
+| 73-76.99        | C
+| 70-72.99        | C-
+| 67-69.99        | D+
+| 63-66.99        | D
+| 60-62.99        | D-
+| 59.99 and below | F
+
+
+#### Assignment Late Policies
+
+We allow students to turn in Homeworks up to a week late without penalty.  If you need to “use” one of your late homeworks use the "Extension Request" tool for each assignment in that week's module and specify that you would like to use an extension.  The extension request needs to be submitted *before the assignment is due* and can not be requested retroactively.  You do not need to provide any explanation for why you’d like to use an extension.  You will then have one extra week to submit this assignment.  No extensions can be applied to Labs, Quizzes, or any parts of the Final Project.
+
+Late policies for homeworks not on extension include: 10% off for up to 1 day late, 20% off for 2 days late, 30% off for 3 days late.  All homeworks not on extension will be given a zero if turned in after 3 days past the due date.
+
+Late policies for labs will be: 5% off for up to 1 day late, 10% for up to 3 days late, 20% for up to 4 days late, 30% for up to 5 days late. There are no extensions for Labs.
+
+Quizzes, Extra Credit assignments, and the Final Project follow homework late policies: 10% off for up to 1 day late, 20% off for 2 days late, 30% off for 3 days late.  All homeworks not on extension will be given a zero if turned in after 3 days past the due date.  There are no extensions for any of these assignments.
+
+
 
 ### Incompletes
 
@@ -283,6 +394,10 @@ Students are required to attend each class, and if they are unable to do so
 must notify the instructor and TA in advance and request an excused absence.
 Participation in class -- in the form of comments, questions, and discussion --
 is expected.
+
+### Email/Slack Policies and Turn-around times
+
+We aim to respond to Slack messages in the main channel within 24 business hours and email within 3 business days.  Please note that personal Slack messages are treated as emails and turn around times will be within 3 days (though we will make every effort to respond sooner than that).  Please do not use Slack for any questions about grades, or other personal queries -- email is the appropriate venue for these questions.  Do not post working code or solutions of any kind on Slack publically.
 
 
 ## Emergency Response: Run, Hide, Fight
