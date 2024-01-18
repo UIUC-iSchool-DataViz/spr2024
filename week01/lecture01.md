@@ -490,19 +490,6 @@ is the necessary reductionism that visualization can require.
 
 ---
 
-<iframe width="1024" height="576"
-src="https://www.youtube.com/embed/In72QAQJ1tY?rel=0" frameborder="0"
-allow="encrypted-media" allowfullscreen></iframe>
-
-notes:
-"There are lots of thing you can compare on a graph / Like who is the shortest
-or the tallest giraffe / You can chart how much you walk / How much that you
-laugh / There are lots of things you can compare on a graph"
-
-"But the one thing you can't chart / Is how you feel in your heart"
-
----
-
 <!-- .slide: data-background-image="images/fov.svg" data-background-size="contain" -->
 
 notes:
