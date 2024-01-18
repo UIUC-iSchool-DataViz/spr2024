@@ -292,6 +292,7 @@ Javascript.  Your projects may be turned in via git.  We will also utilize
 Slack for class communication.
 
 ---
+
 ## Slack
 
 We have a Slack channel for peer-to-peer discussion and questions about assignments.
