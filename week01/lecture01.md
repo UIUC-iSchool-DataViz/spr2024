@@ -199,7 +199,7 @@ get in the way of the underlying meaning?
 - Wrap-up (as needed)
 
 This isn't the first time we've taught this course, but we are always trying new things.  This semester, we're going to be focusing much more on separating apart the theory and the practice of visualization, and we're also going to be using PrairieLearn so that we can try out different tools.
-![[structure-of-class 2023-08-18 15.06.16.excalidraw.svg]]
+![[images/structure-of-class 2023-08-18 15.06.16.excalidraw.svg]]
 
 notes:
 This structure will likely be deviated from during the course, but in general we will start with lecture, take a break, then continue with collaborative or hands-on exercises using group coding.
@@ -292,6 +292,7 @@ Javascript.  Your projects may be turned in via git.  We will also utilize
 Slack for class communication.
 
 ---
+
 ## Slack
 
 We have a Slack channel for peer-to-peer discussion and questions about assignments.
@@ -331,11 +332,13 @@ There'll be a few more along the way.
 
 We will be sharing a slack channel with the in-person class, so feel free to converse with them as well!
 
-- Team channel at `https://is445-fall2023.slack.com`
+- Team channel at `https://is445spring2024.slack.com`
     - `#general` : General announcements, place to ask questions
     - `#random` : see a cool viz you want to share? This is the place!
     - `#introduce-yourself` : where you want to "say hi" for Homework #1
     - `#ASSIGNMENTX-questions` : each assignment will have [a channel](https://slack.com/help/articles/205239967-Join-a-channel) for asking questions specific to that assignment
+
+---
 
 ## Slack (cont)
 
@@ -484,19 +487,6 @@ Visualization **augments** human data analysis capabilities:
 notes:
 Not everything suits itself to visualization -- and part of the reason for that
 is the necessary reductionism that visualization can require.
-
----
-
-<iframe width="1024" height="576"
-src="https://www.youtube.com/embed/In72QAQJ1tY?rel=0" frameborder="0"
-allow="encrypted-media" allowfullscreen></iframe>
-
-notes:
-"There are lots of thing you can compare on a graph / Like who is the shortest
-or the tallest giraffe / You can chart how much you walk / How much that you
-laugh / There are lots of things you can compare on a graph"
-
-"But the one thing you can't chart / Is how you feel in your heart"
 
 ---
 

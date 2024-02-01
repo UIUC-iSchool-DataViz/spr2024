@@ -3,7 +3,7 @@ instructors:
     name: Matthew Turk
     email: mjturk@illinois.edu
     office: Room 5115, 614 E Daniel
-    office_hours: Wednesday 3-4PM and by appointment
+    office_hours: By appointment
 tas:
   -
     name: Tzu-Kun Hsiao
@@ -18,15 +18,15 @@ tas:
 course:
   name: Data Visualization
   number: IS445
-  semester: Fall 2023
+  semester: Spring 2024
   section: ACG-ACU
-  location: Loomis Lab 136
-  time: Monday 9AM-11:50AM
+  location: iSchool 126
+  time: Tuesday and Thursday 3:30PM-4:20PM
   credit_hours: 4
 urls:
   -
     name: Course Materials
-    url: https://uiuc-ischool-dataviz.github.io/fall2023-acg-acu/
+    url: https://uiuc-ischool-dataviz.github.io/spr2024/
   -
     name: Github
-    url: https://github.com/UIUC-iSchool-DataViz/fall2023-acg-acu/
+    url: https://github.com/UIUC-iSchool-DataViz/spr2024/
