@@ -4,6 +4,14 @@ visible: true
 icon: undraw_under_construction_46pa.svg
 notitle: true
 examples:
+  - filename: ipywidgets_intro.ipynb
+    type: ipynb
+    title: Intro to ipywidgets
+    description: The Spring 2024 ipywidgets examples
+  - filename: bqplot_intro.ipynb
+    type: ipynb
+    title: bqplot examples
+    description: The Spring 2024 bqplot examples
   - filename: lecture07_examples.ipynb
     type: ipynb
     title: Traitlets and Widgets
