@@ -1,9 +1,13 @@
 ---
 layout: week
-visible: false
+visible: true
 icon: undraw_metrics_gtu7.svg
 notitle: true
 examples:
+  - filename: example_bqplot_object.ipynb
+    type: ipynb
+    title: bqplot objects and dashboards
+    description: How to set up a stateful object as a dashboard
   - filename: vega_example_gross.html
     type: vega-lite
     title: vega-lite example with IMDB data
