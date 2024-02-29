@@ -95,6 +95,8 @@ What happens when we preserve one property over another?
 
 Mercator is a "conformal" projection.  What is wrong with this?
 
+---
+
 <!-- .slide: data-background-image="images/mercator.png" data-background-size="auto 80%" -->
 
 ---
