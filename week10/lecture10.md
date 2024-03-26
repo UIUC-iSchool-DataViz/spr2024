@@ -68,7 +68,7 @@ Your "observatory" should be located somewhere online, either as a notebook I ca
 
 You will also have five minutes, as a *group*, to present your work in class. This presentation needs to include the final product, as well as a summary of any stumbling blocks you might have had, and a little bit of the process.
 
-These presentations will be on the 4th of December.  The project will be due by the end of finals week, but you are **strongly encouraged** to submit earlier.
+These presentations will be on the 30th of April.  The project will be due by the end of finals week, but you are **strongly encouraged** to submit earlier.
 
 ---
 
