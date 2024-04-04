@@ -423,15 +423,6 @@ although it is straightforward to include the necessary code in an HTML page:
 
 ---
 
-## Time to Vote!
-
-Do we want to learn a new platform today?
-
-Should we dive into Observable, or should we stick with Iodide?
-
-
----
-
 ## Concepts in d3: outline
 
 The basic concepts here we will convey, focusing on *static* visualizations:
@@ -555,7 +546,7 @@ const svg = d3.create("svg")
   .attr("height", 300);
 ```
 
-or, in Iodide, we can create one through standard HTML:
+or, in Starboard, we can create one through standard HTML:
 
 ```
 <svg id="my_svg">
