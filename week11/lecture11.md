@@ -411,13 +411,13 @@ We're going to learn a very small bit of [d3.js](https://d3js.org/).
 The easiest way to utilize D3 is through [observablehq.com](https://observablehq.com):
 
 ```
-d3 = require("d3@6");
+d3 = require("d3@7");
 ```
 
 although it is straightforward to include the necessary code in an HTML page:
 
 <code>
-&lt;script src="https://d3js.org/d3.v6.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;
 </code>
 
 
